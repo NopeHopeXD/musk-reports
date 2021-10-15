@@ -51,5 +51,10 @@ namespace musk_reports
         {
 
         }
+
+        private void AllCompGraph_Click(object sender, EventArgs e)
+        {
+            (new Form2()).ShowDialog();
+        }
     }
 }
