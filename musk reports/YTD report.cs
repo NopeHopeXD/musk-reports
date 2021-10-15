@@ -35,11 +35,21 @@ namespace musk_reports
         {
             if (this.Width == this.screensize)
             {
-                this.Width += 250;
+                this.Width += 450;
             }
             else {
                 this.Width = this.screensize;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
