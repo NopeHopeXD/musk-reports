@@ -33,13 +33,7 @@ namespace musk_reports
 
         private void Graphs_Click(object sender, EventArgs e)
         {
-            if (this.Width == this.screensize)
-            {
-                this.Width += 450;
-            }
-            else {
-                this.Width = this.screensize;
-            }
+            GraphsPanel.Visible = !GraphsPanel.Visible;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,7 +48,17 @@ namespace musk_reports
 
         private void AllCompGraph_Click(object sender, EventArgs e)
         {
-            (new Form2()).ShowDialog();
+            
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GraphsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
