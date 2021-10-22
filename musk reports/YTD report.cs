@@ -60,5 +60,10 @@ namespace musk_reports
         {
 
         }
+
+        private void AllReportsPage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
