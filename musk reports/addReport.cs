@@ -27,5 +27,10 @@ namespace createR
         {
 
         }
+
+        private void LblAddReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
