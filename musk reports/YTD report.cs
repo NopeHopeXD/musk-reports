@@ -28,7 +28,9 @@ namespace musk_reports
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
+            // Create new Report, new table inside database, unique ID
+            // User must enter report title, and some other details like the site, work area, etc. (check Safety Audit Examples PDF for more)
+            // 
         }
 
         private void Graphs_Click(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace musk_reports
 
         private void AllCompGraph_Click(object sender, EventArgs e)
         {
-            
+            // 
         }
 
         private void chart4_Click(object sender, EventArgs e)
@@ -63,7 +65,8 @@ namespace musk_reports
 
         private void AllReportsPage_Click(object sender, EventArgs e)
         {
-
+            // Delete report, get current ID and remove from database.
+            // Be sure to have a prompt "Are you sure you want to delete?"
         }
     }
 }
