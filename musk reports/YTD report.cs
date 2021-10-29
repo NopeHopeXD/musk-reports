@@ -12,30 +12,9 @@ namespace musk_reports
 {
     public partial class Form1 : Form
     {
-
-        int screensize;
-
         public Form1()
         {
             InitializeComponent();
-            this.screensize = this.Width;
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            // Create new Report, new table inside database, unique ID
-            // User must enter report title, and some other details like the site, work area, etc. (check Safety Audit Examples PDF for more)
-            // 
-        }
-
-        private void Graphs_Click(object sender, EventArgs e)
-        {
-            GraphsPanel.Visible = !GraphsPanel.Visible;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,30 +22,51 @@ namespace musk_reports
 
         }
 
-        private void Panel2_Paint(object sender, PaintEventArgs e)
+        private void dtSetup(DataTable dt)
         {
+            dt.Columns.Add("SubSections", typeof(string));
+            dt.Columns.Add("T&L", typeof(int));
+            dt.Columns.Add("AkzoNobel Snowmarket", typeof(int));
+            dt.Columns.Add("Weetabix", typeof(int));
+            dt.Columns.Add("Koito", typeof(int));
+            dt.Columns.Add("Mars Melton", typeof(int));
+            dt.Columns.Add("Projects", typeof(int));
+            dt.Columns.Add("Design", typeof(int));
+            dt.Columns.Add("Misc", typeof(int));
+            dt.Columns.Add("Monthly Total", typeof(int));
+
 
         }
 
-        private void AllCompGraph_Click(object sender, EventArgs e)
+        private void doSQLshit()
         {
-            // 
+            //fuck sql just sayin XD
+
+            DatabaseConnection dbConn = new DatabaseConnection();
+            string TestText = "";
+
+            DataTable dt = new DataTable();
+            dbConn.getData("");
+            Grid.DataSource = dt;
+            //set up table for data
+            dtSetup(dt);
+
+            foreach (var d in dbConn.data)
+            {
+                TestText += d.Comment + ", ";
+
+            }
+            TestDisp.Text = TestText;
         }
 
-        private void chart4_Click(object sender, EventArgs e)
+        private void Test_Click(object sender, EventArgs e)
         {
+            Test.Text = "Loading DB";
 
-        }
+            doSQLshit();
 
-        private void GraphsPanel_Paint(object sender, PaintEventArgs e)
-        {
+            //Test.Text = "Something Happened";
 
-        }
-
-        private void AllReportsPage_Click(object sender, EventArgs e)
-        {
-            // Delete report, get current ID and remove from database.
-            // Be sure to have a prompt "Are you sure you want to delete?"
         }
     }
 }
