@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbConnection.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
