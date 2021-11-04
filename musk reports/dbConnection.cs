@@ -76,6 +76,13 @@ namespace musk_reports
              
              */
             
+
+            /* Notes about below, I've tried changing it a lot in order to get 
+             * the program to run and successfully load the database, however
+             * this has not been successful :/
+             * So yeah I've reverted it back to how it was before, still not working.
+             *  -- Lloyd
+             */
             using (SqlConnection cn = new SqlConnection(connStr))
             {
                 cn.Open();
