@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace createR
 {
-    public partial class Form1 : Form
+    public partial class addReportF : Form
     {
-        public Form1()
+        public addReportF()
         {
             InitializeComponent();
         }
@@ -29,6 +29,11 @@ namespace createR
         }
 
         private void LblAddReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgInspectionForm_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

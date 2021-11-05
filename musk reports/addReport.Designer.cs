@@ -1,8 +1,10 @@
 ﻿
 namespace createR
 {
-    partial class Form1
+    partial class addReportF
     {
+        private const int V = 28;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -40,14 +42,15 @@ namespace createR
             this.inspector_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_of_inspection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type_of_inspection = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgInpectionForm = new System.Windows.Forms.DataGridView();
             this.inspection_cat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.number_of_intervensions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comments_ab_interv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.completed_inspection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInpectionForm)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddReport
@@ -57,7 +60,7 @@ namespace createR
             this.lblAddReport.Location = new System.Drawing.Point(14, 28);
             this.lblAddReport.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAddReport.Name = "lblAddReport";
-            this.lblAddReport.Size = new System.Drawing.Size(110, 25);
+            this.lblAddReport.Size = new System.Drawing.Size(168, 36);
             this.lblAddReport.TabIndex = 0;
             this.lblAddReport.Text = "Add Report";
             this.lblAddReport.Click += new System.EventHandler(this.LblAddReport_Click);
@@ -67,7 +70,7 @@ namespace createR
             this.lbltitleReport.AutoSize = true;
             this.lbltitleReport.Location = new System.Drawing.Point(354, 113);
             this.lbltitleReport.Name = "lbltitleReport";
-            this.lbltitleReport.Size = new System.Drawing.Size(412, 20);
+            this.lbltitleReport.Size = new System.Drawing.Size(615, 29);
             this.lbltitleReport.TabIndex = 1;
             this.lbltitleReport.Text = "Health, Safety, Quality and Environmental Site Inspection";
             // 
@@ -87,7 +90,7 @@ namespace createR
             this.overallInformation.Name = "overallInformation";
             this.overallInformation.RowHeadersWidth = 62;
             this.overallInformation.RowTemplate.Height = 28;
-            this.overallInformation.Size = new System.Drawing.Size(1233, 123);
+            this.overallInformation.Size = new System.Drawing.Size(1233, 92);
             this.overallInformation.TabIndex = 2;
             this.overallInformation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -147,21 +150,21 @@ namespace createR
             this.type_of_inspection.Name = "type_of_inspection";
             this.type_of_inspection.Width = 150;
             // 
-            // dataGridView1
+            // dgInpectionForm
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgInpectionForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgInpectionForm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.inspection_cat,
             this.number_of_intervensions,
             this.comments_ab_interv,
             this.completed_inspection,
             this.action_taken});
-            this.dataGridView1.Location = new System.Drawing.Point(264, 315);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(809, 325);
-            this.dataGridView1.TabIndex = 3;
+            this.dgInpectionForm.Location = new System.Drawing.Point(264, 315);
+            this.dgInpectionForm.Name = "dgInpectionForm";
+            this.dgInpectionForm.RowHeadersWidth = 62;
+            this.dgInpectionForm.Size = new System.Drawing.Size(809, 325);
+            this.dgInpectionForm.TabIndex = 3;
+            this.dgInpectionForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // inspection_cat
             // 
@@ -198,25 +201,43 @@ namespace createR
             this.action_taken.Name = "action_taken";
             this.action_taken.Width = 150;
             // 
-            // Form1
+            // btnSave
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.btnSave.Location = new System.Drawing.Point(1171, 584);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(92, 35);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // addReportF
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 652);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.dgInpectionForm);
             this.Controls.Add(this.overallInformation);
             this.Controls.Add(this.lbltitleReport);
             this.Controls.Add(this.lblAddReport);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "Form1";
+            this.Name = "addReportF";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInpectionForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void NewMethod()
+        {
+            using (addReportF form1 = this)
+            {
+                form1.dgInpectionForm.RowTemplate.Height = V;
+            }
         }
 
         #endregion
@@ -232,12 +253,13 @@ namespace createR
         private System.Windows.Forms.DataGridViewTextBoxColumn inspector_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_of_inspection;
         private System.Windows.Forms.DataGridViewTextBoxColumn type_of_inspection;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgInpectionForm;
         private System.Windows.Forms.DataGridViewTextBoxColumn inspection_cat;
         private System.Windows.Forms.DataGridViewTextBoxColumn number_of_intervensions;
         private System.Windows.Forms.DataGridViewTextBoxColumn comments_ab_interv;
         private System.Windows.Forms.DataGridViewTextBoxColumn completed_inspection;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_taken;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
