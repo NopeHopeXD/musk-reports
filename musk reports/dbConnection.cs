@@ -82,6 +82,11 @@ namespace musk_reports
              * this has not been successful :/
              * So yeah I've reverted it back to how it was before, still not working.
              *  -- Lloyd
+             *  
+             *  I think the code here is fine but DBConnStr was set to a specific directory under the H: drive, so it couldn't locate the database.
+             *  I've changed that so hopefully it should work for everyone? 
+             *  -Adam
+             *  
              */
             using (SqlConnection cn = new SqlConnection(connStr))
             {
