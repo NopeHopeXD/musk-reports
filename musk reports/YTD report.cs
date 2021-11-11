@@ -35,6 +35,14 @@ namespace musk_reports
             dt.Columns.Add("Misc", typeof(int));
             dt.Columns.Add("Monthly Total", typeof(int));
 
+            /* Hi! It's Lloyd here again
+             * So above, I can imagine some aren't supposed to be integers, some are meant to be strings.
+             * However I'm not certain which ones should be which so I'll leave it for now.
+             * Obviously an error occurs when the user enters data that doesn't match the data type required,
+             * so I'll be working on trying to solve this issue and more validation stuff over the next while.
+             * I'll do more of this tomorrow. Cheers chaps.
+             */
+
 
         }
 
@@ -66,6 +74,11 @@ namespace musk_reports
             doSQLshit();
 
             //Test.Text = "Something Happened";
+
+        }
+
+        private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
