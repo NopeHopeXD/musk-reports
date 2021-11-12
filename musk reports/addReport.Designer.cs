@@ -49,6 +49,7 @@ namespace createR
             this.completed_inspection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgInpectionForm)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@ namespace createR
             // 
             this.lblAddReport.AutoSize = true;
             this.lblAddReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddReport.Location = new System.Drawing.Point(14, 28);
+            this.lblAddReport.Location = new System.Drawing.Point(60, 31);
             this.lblAddReport.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAddReport.Name = "lblAddReport";
             this.lblAddReport.Size = new System.Drawing.Size(110, 25);
@@ -210,11 +211,23 @@ namespace createR
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.Location = new System.Drawing.Point(264, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Report Overview";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // addReportF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 651);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgInpectionForm);
             this.Controls.Add(this.overallInformation);
@@ -260,6 +273,7 @@ namespace createR
         private System.Windows.Forms.DataGridViewTextBoxColumn completed_inspection;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_taken;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button button1;
     }
 }
 
