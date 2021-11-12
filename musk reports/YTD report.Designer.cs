@@ -59,7 +59,7 @@
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Location = new System.Drawing.Point(3, 3);
             this.Grid.Name = "Grid";
-            this.Grid.Size = new System.Drawing.Size(787, 440);
+            this.Grid.Size = new System.Drawing.Size(1005, 551);
             this.Grid.TabIndex = 2;
             this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
             // 
@@ -111,7 +111,7 @@
             // Test
             // 
             this.Test.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Test.Location = new System.Drawing.Point(78, 3);
+            this.Test.Location = new System.Drawing.Point(63, 3);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(102, 23);
             this.Test.TabIndex = 0;

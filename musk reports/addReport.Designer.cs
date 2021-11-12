@@ -50,15 +50,21 @@ namespace createR
             this.action_taken = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgInpectionForm)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAddReport
             // 
-            this.lblAddReport.AutoSize = true;
+            this.lblAddReport.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAddReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddReport.Location = new System.Drawing.Point(60, 31);
+            this.lblAddReport.Location = new System.Drawing.Point(44, 15);
             this.lblAddReport.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAddReport.Name = "lblAddReport";
             this.lblAddReport.Size = new System.Drawing.Size(110, 25);
@@ -69,7 +75,7 @@ namespace createR
             // lbltitleReport
             // 
             this.lbltitleReport.AutoSize = true;
-            this.lbltitleReport.Location = new System.Drawing.Point(354, 113);
+            this.lbltitleReport.Location = new System.Drawing.Point(3, 62);
             this.lbltitleReport.Name = "lbltitleReport";
             this.lbltitleReport.Size = new System.Drawing.Size(412, 20);
             this.lbltitleReport.TabIndex = 1;
@@ -87,11 +93,11 @@ namespace createR
             this.inspector_name,
             this.date_of_inspection,
             this.type_of_inspection});
-            this.overallInformation.Location = new System.Drawing.Point(30, 145);
+            this.overallInformation.Location = new System.Drawing.Point(3, 127);
             this.overallInformation.Name = "overallInformation";
             this.overallInformation.RowHeadersWidth = 62;
             this.overallInformation.RowTemplate.Height = 28;
-            this.overallInformation.Size = new System.Drawing.Size(1233, 92);
+            this.overallInformation.Size = new System.Drawing.Size(1233, 244);
             this.overallInformation.TabIndex = 2;
             this.overallInformation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -160,10 +166,10 @@ namespace createR
             this.comments_ab_interv,
             this.completed_inspection,
             this.action_taken});
-            this.dgInpectionForm.Location = new System.Drawing.Point(264, 315);
+            this.dgInpectionForm.Location = new System.Drawing.Point(3, 3);
             this.dgInpectionForm.Name = "dgInpectionForm";
             this.dgInpectionForm.RowHeadersWidth = 62;
-            this.dgInpectionForm.Size = new System.Drawing.Size(809, 325);
+            this.dgInpectionForm.Size = new System.Drawing.Size(813, 241);
             this.dgInpectionForm.TabIndex = 3;
             this.dgInpectionForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -204,7 +210,8 @@ namespace createR
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(1171, 584);
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSave.Location = new System.Drawing.Point(823, 106);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(92, 35);
             this.btnSave.TabIndex = 4;
@@ -213,8 +220,9 @@ namespace createR
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.Location = new System.Drawing.Point(264, 35);
+            this.button1.Location = new System.Drawing.Point(202, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 23);
             this.button1.TabIndex = 5;
@@ -222,17 +230,58 @@ namespace createR
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbltitleReport, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.overallInformation, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 627);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.86922F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.13078F));
+            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblAddReport, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1254, 56);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.70513F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.29487F));
+            this.tableLayoutPanel3.Controls.Add(this.dgInpectionForm, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnSave, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 377);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1248, 247);
+            this.tableLayoutPanel3.TabIndex = 8;
+            // 
             // addReportF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 651);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgInpectionForm);
-            this.Controls.Add(this.overallInformation);
-            this.Controls.Add(this.lbltitleReport);
-            this.Controls.Add(this.lblAddReport);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "addReportF";
@@ -240,8 +289,11 @@ namespace createR
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgInpectionForm)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -274,6 +326,9 @@ namespace createR
         private System.Windows.Forms.DataGridViewTextBoxColumn action_taken;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 
