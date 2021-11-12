@@ -64,7 +64,22 @@ namespace musk_reports
             return s;
         }
 
+        private List<string> ColumnNames()
+        {
+            List<string> s = new List<string>();
+            s.Add("SubSections");
+            s.Add("T&L");
+            s.Add("AkzoNobel Snowmarket");
+            s.Add("Weetabix");
+            s.Add("Koito");
+            s.Add("Mars Melton");
+            s.Add("Projects");
+            s.Add("Design");
+            s.Add("Misc");
+            s.Add("Monthly Total");
 
+            return s;
+        }
 
         public void dtSetup()
         {
@@ -119,21 +134,27 @@ namespace musk_reports
         private void Test_Click(object sender, EventArgs e)
         {
             Test.Text = "Loading DB";
-            string Command = "SELECT * FROM Data INNER JOIN Header ON DataSetID=Header.HeaderID AND Header.Site='Mars Melton'";
-            List<Data> d = fetchData(Command);
+            foreach (var i in ColumnNames())
+            {
+                string Command = "SELECT * FROM Data INNER JOIN Header ON DataSetID=Header.HeaderID AND Header.Site='"+i+"'";
+                List<Data> d = fetchData(Command);
 
-            foreach (var i in d) {
-                string temp = dt.Rows[i.InterventionNo]["Mars Melton"].ToString();
-                if (temp == "")
+                foreach (var j in d)
                 {
-                    dt.Rows[i.InterventionNo]["Mars Melton"] = i.Interventions;
-                } else
-                {
-                    int intTemp = Int16.Parse(temp);
-                    intTemp+=i.Interventions;
-                    dt.Rows[i.InterventionNo]["Mars Melton"] = intTemp;
+                    string temp = dt.Rows[j.InterventionNo][i].ToString();
+                    if (temp == "")
+                    {
+                        dt.Rows[j.InterventionNo][i] = j.Interventions;
+                    }
+                    else
+                    {
+                        int intTemp = Int16.Parse(temp);
+                        intTemp += j.Interventions;
+                        dt.Rows[j.InterventionNo][i] = intTemp;
+                    }
                 }
             }
+
 
             //Test.Text = "Something Happened";
 
