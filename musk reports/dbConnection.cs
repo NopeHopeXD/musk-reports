@@ -58,36 +58,13 @@ namespace musk_reports
         }
         */
 
-        public void getData(string company)
+        public void getData(string SQLCommand)
         {
-            /*
-
-            List<Data> data = new List<Data>();
-
-            HeaderIDs = FROM Header SELECT HeaderID WHERE 'Work Area# == company
-            for j in HeaderIDs
-                DataSets = FROM DataSet SELECT DataSetID WHERE HeaderID = j
-                for k in DataSets
-                    Data d = new Data();
-                    d.add...
-                    ...
-                    data.add(d);
-            return data
-             
-             */
-            
-
-            /* Notes about below, I've tried changing it a lot in order to get 
-             * the program to run and successfully load the database, however
-             * this has not been successful :/
-             * So yeah I've reverted it back to how it was before, still not working.
-             *  -- Lloyd
-             */
             using (SqlConnection cn = new SqlConnection(connStr))
             {
                 cn.Open();
 
-                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Data Where DataSetID = 1", cn);
+                SqlCommand sqlCommand = new SqlCommand(SQLCommand, cn);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
