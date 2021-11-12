@@ -60,7 +60,7 @@ namespace createR
             this.lblAddReport.Location = new System.Drawing.Point(14, 28);
             this.lblAddReport.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAddReport.Name = "lblAddReport";
-            this.lblAddReport.Size = new System.Drawing.Size(168, 36);
+            this.lblAddReport.Size = new System.Drawing.Size(110, 25);
             this.lblAddReport.TabIndex = 0;
             this.lblAddReport.Text = "Add Report";
             this.lblAddReport.Click += new System.EventHandler(this.LblAddReport_Click);
@@ -70,7 +70,7 @@ namespace createR
             this.lbltitleReport.AutoSize = true;
             this.lbltitleReport.Location = new System.Drawing.Point(354, 113);
             this.lbltitleReport.Name = "lbltitleReport";
-            this.lbltitleReport.Size = new System.Drawing.Size(615, 29);
+            this.lbltitleReport.Size = new System.Drawing.Size(412, 20);
             this.lbltitleReport.TabIndex = 1;
             this.lbltitleReport.Text = "Health, Safety, Quality and Environmental Site Inspection";
             // 
@@ -212,9 +212,9 @@ namespace createR
             // 
             // addReportF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 652);
+            this.ClientSize = new System.Drawing.Size(1284, 651);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgInpectionForm);
             this.Controls.Add(this.overallInformation);

@@ -37,6 +37,7 @@
             this.Test = new System.Windows.Forms.Button();
             this.TitleBox = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -48,17 +49,16 @@
             // 
             this.panel2.Controls.Add(this.Grid);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(196, 58);
+            this.panel2.Location = new System.Drawing.Point(246, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 453);
+            this.panel2.Size = new System.Drawing.Size(1011, 554);
             this.panel2.TabIndex = 3;
             // 
             // Grid
             // 
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid.Location = new System.Drawing.Point(9, 10);
+            this.Grid.Location = new System.Drawing.Point(3, 3);
             this.Grid.Name = "Grid";
-            this.Grid.RowHeadersWidth = 51;
             this.Grid.Size = new System.Drawing.Size(787, 440);
             this.Grid.TabIndex = 2;
             this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
@@ -80,35 +80,38 @@
             this.tableLayoutPanel1.Controls.Add(this.Menu, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.TitleBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.70039F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.29961F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1001, 517);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 627);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // Menu
             // 
             this.Menu.Controls.Add(this.TestDisp);
             this.Menu.Controls.Add(this.Test);
-            this.Menu.Location = new System.Drawing.Point(3, 58);
+            this.Menu.Location = new System.Drawing.Point(3, 70);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(186, 453);
+            this.Menu.Size = new System.Drawing.Size(237, 554);
             this.Menu.TabIndex = 1;
             // 
             // TestDisp
             // 
             this.TestDisp.AutoSize = true;
-            this.TestDisp.Location = new System.Drawing.Point(55, 91);
+            this.TestDisp.Location = new System.Drawing.Point(95, 49);
             this.TestDisp.Name = "TestDisp";
             this.TestDisp.Size = new System.Drawing.Size(34, 13);
             this.TestDisp.TabIndex = 1;
             this.TestDisp.Text = "Temp";
+            this.TestDisp.Click += new System.EventHandler(this.TestDisp_Click);
             // 
             // Test
             // 
-            this.Test.Location = new System.Drawing.Point(31, 19);
+            this.Test.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Test.Location = new System.Drawing.Point(78, 3);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(102, 23);
             this.Test.TabIndex = 0;
@@ -121,26 +124,36 @@
             this.TitleBox.Controls.Add(this.Label);
             this.TitleBox.Location = new System.Drawing.Point(3, 3);
             this.TitleBox.Name = "TitleBox";
-            this.TitleBox.Size = new System.Drawing.Size(186, 48);
+            this.TitleBox.Size = new System.Drawing.Size(237, 61);
             this.TitleBox.TabIndex = 2;
             // 
             // Label
             // 
-            this.Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Label.AutoSize = true;
-            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label.Location = new System.Drawing.Point(26, 12);
+            this.Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.Label.Location = new System.Drawing.Point(0, 0);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(132, 25);
+            this.Label.Size = new System.Drawing.Size(237, 61);
             this.Label.TabIndex = 0;
             this.Label.Text = "Musk Reports";
             this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Location = new System.Drawing.Point(246, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Add Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 541);
+            this.ClientSize = new System.Drawing.Size(1284, 651);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Musk Reports";
@@ -152,7 +165,6 @@
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.TitleBox.ResumeLayout(false);
-            this.TitleBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -168,6 +180,7 @@
         private System.Windows.Forms.Button Test;
         private System.Windows.Forms.Panel TitleBox;
         private System.Windows.Forms.Label Label;
+        private System.Windows.Forms.Button button1;
     }
 }
 

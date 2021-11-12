@@ -164,5 +164,15 @@ namespace musk_reports
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new createR.addReportF()).Show(); this.Close();
+        }
+
+        private void TestDisp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
