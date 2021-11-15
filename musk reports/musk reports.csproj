@@ -70,7 +70,9 @@
     <Compile Include="AddNewReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewReport.Designer.cs" />
+    <Compile Include="AddNewReport.designer.cs">
+      <DependentUpon>AddNewReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="addReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,10 +80,6 @@
       <DependentUpon>addReport.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConnection.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddNewReport.resx" />
+    <EmbeddedResource Include="AddNewReport.resx">
+      <DependentUpon>AddNewReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addReport.resx">
       <DependentUpon>addReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx" />
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>

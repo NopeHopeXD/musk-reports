@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SafetyAuditForm
+namespace musk_reports
 {
     public partial class AddNewReport : Form
     {

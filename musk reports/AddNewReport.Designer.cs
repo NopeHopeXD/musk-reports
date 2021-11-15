@@ -1,4 +1,4 @@
-﻿namespace SafetyAuditForm
+﻿namespace musk_reports
 {
     partial class AddNewReport
     {
