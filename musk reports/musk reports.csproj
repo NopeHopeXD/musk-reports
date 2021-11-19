@@ -79,7 +79,7 @@
     <Compile Include="addReport.designer.cs">
       <DependentUpon>addReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="dbConnection.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>

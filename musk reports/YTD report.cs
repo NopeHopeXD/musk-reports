@@ -19,6 +19,7 @@ namespace musk_reports
         {
             InitializeComponent();
             dtSetup();
+            //graphSetup();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -81,6 +82,58 @@ namespace musk_reports
             return s;
         }
 
+        private void graphSetup()
+        {
+            //make a doughnut graph that displays the total infractions, split on the subsections
+
+            string[] x = new string[RowNames().Count()];
+            RowNames().CopyTo(x);
+
+            int[] y = new int[RowNames().Count()];
+
+            int count = 0;
+            for( var i = 0; i < RowNames().Count(); i++)
+            {
+                y[i] = 0;
+                for (var j = 1; j < ColumnNames().Count(); j++)
+                {
+                    string temp = dt.Rows[i][j].ToString();
+                    if (temp != "")
+                    {
+                        y[i] += Int16.Parse(temp);
+                    }                  
+                }
+                if (y[i] == 0)
+                {
+                    x[i] = "";
+                } else
+                {
+                    count += 1;
+                }
+            }
+
+            string[] x1 = new string[count];
+            int[] y1 = new int[count];
+
+            int temp1 = 0;
+            for(var i=0;i<y.Length;i++)
+            {
+                if (y[i] != 0)
+                {
+                    y1[temp1] = y[i];
+                    x1[temp1] = x[i];
+                    temp1++;
+                }
+            }
+
+            chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            chart1.Series[0].Points.DataBindXY(x1, y1);
+            chart1.Legends[0].Enabled = true;
+            //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+
+        }
+
         public void dtSetup()
         {
 
@@ -106,14 +159,6 @@ namespace musk_reports
                 row["SubSections"] = s[i];
                 dt.Rows.Add(row);
             }
-
-            /* Hi! It's Lloyd here again
-             * So above, I can imagine some aren't supposed to be integers, some are meant to be strings.
-             * However I'm not certain which ones should be which so I'll leave it for now.
-             * Obviously an error occurs when the user enters data that doesn't match the data type required,
-             * so I'll be working on trying to solve this issue and more validation stuff over the next while.
-             * I'll do more of this tomorrow. Cheers chaps.
-             */
 
 
         }
@@ -170,9 +215,16 @@ namespace musk_reports
             (new createR.addReportF()).Show(); this.Close();
         }
 
-        private void TestDisp_Click(object sender, EventArgs e)
+        private void DispGraphPage_Click(object sender, EventArgs e)
         {
-
+            Graphs.Visible = !Graphs.Visible;
+            if (Graphs.Visible) {
+                graphSetup();
+                DispGraphPage.Text = "Show Table";
+            } else
+            {
+                DispGraphPage.Text = "Show Graphs";
+            }
         }
     }
 }
