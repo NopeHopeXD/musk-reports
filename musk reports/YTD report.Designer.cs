@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Graphs = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Menu = new System.Windows.Forms.Panel();
+            this.DispGraphPage = new System.Windows.Forms.Button();
             this.Test = new System.Windows.Forms.Button();
             this.TitleBox = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.Graphs = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.DispGraphPage = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.Graphs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.Menu.SuspendLayout();
             this.TitleBox.SuspendLayout();
-            this.Graphs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,6 +62,41 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1011, 554);
             this.panel2.TabIndex = 3;
+            // 
+            // Graphs
+            // 
+            this.Graphs.Controls.Add(this.label2);
+            this.Graphs.Controls.Add(this.chart1);
+            this.Graphs.Location = new System.Drawing.Point(0, 0);
+            this.Graphs.Name = "Graphs";
+            this.Graphs.Size = new System.Drawing.Size(1011, 554);
+            this.Graphs.TabIndex = 3;
+            this.Graphs.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(67, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(141, 31);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(731, 508);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // Grid
             // 
@@ -107,6 +142,16 @@
             this.Menu.Size = new System.Drawing.Size(237, 554);
             this.Menu.TabIndex = 1;
             // 
+            // DispGraphPage
+            // 
+            this.DispGraphPage.Location = new System.Drawing.Point(63, 51);
+            this.DispGraphPage.Name = "DispGraphPage";
+            this.DispGraphPage.Size = new System.Drawing.Size(102, 23);
+            this.DispGraphPage.TabIndex = 2;
+            this.DispGraphPage.Text = "Show Graphs";
+            this.DispGraphPage.UseVisualStyleBackColor = true;
+            this.DispGraphPage.Click += new System.EventHandler(this.DispGraphPage_Click);
+            // 
             // Test
             // 
             this.Test.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -148,51 +193,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Graphs
-            // 
-            this.Graphs.Controls.Add(this.label2);
-            this.Graphs.Controls.Add(this.chart1);
-            this.Graphs.Location = new System.Drawing.Point(0, 0);
-            this.Graphs.Name = "Graphs";
-            this.Graphs.Size = new System.Drawing.Size(1011, 554);
-            this.Graphs.TabIndex = 3;
-            this.Graphs.Visible = false;
-            // 
-            // chart1
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(297, 125);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // DispGraphPage
-            // 
-            this.DispGraphPage.Location = new System.Drawing.Point(63, 51);
-            this.DispGraphPage.Name = "DispGraphPage";
-            this.DispGraphPage.Size = new System.Drawing.Size(102, 23);
-            this.DispGraphPage.TabIndex = 2;
-            this.DispGraphPage.Text = "Show Graphs";
-            this.DispGraphPage.UseVisualStyleBackColor = true;
-            this.DispGraphPage.Click += new System.EventHandler(this.DispGraphPage_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,13 +204,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.Graphs.ResumeLayout(false);
+            this.Graphs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
             this.TitleBox.ResumeLayout(false);
-            this.Graphs.ResumeLayout(false);
-            this.Graphs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }

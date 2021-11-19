@@ -87,13 +87,51 @@ namespace musk_reports
             //make a doughnut graph that displays the total infractions, split on the subsections
 
             string[] x = new string[RowNames().Count()];
+            RowNames().CopyTo(x);
 
-            int y;
+            int[] y = new int[RowNames().Count()];
+
+            int count = 0;
+            for( var i = 0; i < RowNames().Count(); i++)
+            {
+                y[i] = 0;
+                for (var j = 1; j < ColumnNames().Count(); j++)
+                {
+                    string temp = dt.Rows[i][j].ToString();
+                    if (temp != "")
+                    {
+                        y[i] += Int16.Parse(temp);
+                    }                  
+                }
+                if (y[i] == 0)
+                {
+                    x[i] = "";
+                } else
+                {
+                    count += 1;
+                }
+            }
+
+            string[] x1 = new string[count];
+            int[] y1 = new int[count];
+
+            int temp1 = 0;
+            for(var i=0;i<y.Length;i++)
+            {
+                if (y[i] != 0)
+                {
+                    y1[temp1] = y[i];
+                    x1[temp1] = x[i];
+                    temp1++;
+                }
+            }
 
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            //chart1.Series[0].Points.DataBindXY(x, y);
+            chart1.Series[0].Points.DataBindXY(x1, y1);
             chart1.Legends[0].Enabled = true;
             //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+
+
         }
 
         public void dtSetup()
