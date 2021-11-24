@@ -40,10 +40,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Menu = new System.Windows.Forms.Panel();
             this.DispGraphPage = new System.Windows.Forms.Button();
-            this.Test = new System.Windows.Forms.Button();
             this.TitleBox = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.Graphs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -135,8 +135,8 @@
             // 
             // Menu
             // 
+            this.Menu.Controls.Add(this.button2);
             this.Menu.Controls.Add(this.DispGraphPage);
-            this.Menu.Controls.Add(this.Test);
             this.Menu.Location = new System.Drawing.Point(3, 70);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(237, 554);
@@ -151,17 +151,6 @@
             this.DispGraphPage.Text = "Show Graphs";
             this.DispGraphPage.UseVisualStyleBackColor = true;
             this.DispGraphPage.Click += new System.EventHandler(this.DispGraphPage_Click);
-            // 
-            // Test
-            // 
-            this.Test.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Test.Location = new System.Drawing.Point(63, 3);
-            this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(102, 23);
-            this.Test.TabIndex = 0;
-            this.Test.Text = "Load Report Here";
-            this.Test.UseVisualStyleBackColor = true;
-            this.Test.Click += new System.EventHandler(this.Test_Click);
             // 
             // TitleBox
             // 
@@ -193,6 +182,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(81, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,7 +221,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel Menu;
-        private System.Windows.Forms.Button Test;
         private System.Windows.Forms.Panel TitleBox;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Button button1;
@@ -230,6 +228,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button DispGraphPage;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
