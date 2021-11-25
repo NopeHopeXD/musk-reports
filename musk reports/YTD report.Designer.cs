@@ -67,7 +67,7 @@
             // 
             this.Graphs.Controls.Add(this.label2);
             this.Graphs.Controls.Add(this.chart1);
-            this.Graphs.Location = new System.Drawing.Point(0, 0);
+            this.Graphs.Location = new System.Drawing.Point(6, 6);
             this.Graphs.Name = "Graphs";
             this.Graphs.Size = new System.Drawing.Size(1011, 554);
             this.Graphs.TabIndex = 3;
@@ -103,6 +103,7 @@
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Location = new System.Drawing.Point(6, 6);
             this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
             this.Grid.Size = new System.Drawing.Size(1005, 551);
             this.Grid.TabIndex = 2;
             this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
