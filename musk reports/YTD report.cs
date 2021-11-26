@@ -212,7 +212,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new createR.addReportF()).Show(); this.Close();
+            (new musk_reports.AddNewReport()).Show(); this.Close();
         }
 
         private void DispGraphPage_Click(object sender, EventArgs e)
@@ -225,6 +225,11 @@ namespace musk_reports
             {
                 DispGraphPage.Text = "Show Graphs";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.RemoveReport()).Show(); this.Close();
         }
     }
 }

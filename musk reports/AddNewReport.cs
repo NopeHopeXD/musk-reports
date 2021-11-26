@@ -81,5 +81,10 @@ namespace musk_reports
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.Form1()).Show(); this.Close();
+        }
     }
 }
