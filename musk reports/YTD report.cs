@@ -212,7 +212,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new musk_reports.AddNewReport()).Show(); this.Close();
+            (new createR.addReportF()).Show(); this.Close();
         }
 
         private void DispGraphPage_Click(object sender, EventArgs e)
