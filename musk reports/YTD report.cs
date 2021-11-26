@@ -33,7 +33,7 @@ namespace musk_reports
 
             GenFunc gf = new GenFunc();
             Tuple<string[], int[]> XYaxis = gf.getAxis(dt);
-            string []xAxis = XYaxis.Item1;
+            string[] xAxis = XYaxis.Item1;
             int[] yAxis = XYaxis.Item2;
 
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -46,7 +46,7 @@ namespace musk_reports
 
         private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -82,18 +82,16 @@ namespace musk_reports
         private void DispGraphPage_Click(object sender, EventArgs e)
         {
             Graphs.Visible = !Graphs.Visible;
-            if (Graphs.Visible) {
+            if (Graphs.Visible)
+            {
                 graphSetup();
                 DispGraphPage.Text = "Show Table";
-            } else
+            }
+            else
             {
                 DispGraphPage.Text = "Show Graphs";
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            button2.Text = dt.Rows[4][1].ToString();
-        }
     }
 }
