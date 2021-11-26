@@ -9,10 +9,16 @@ namespace musk_reports
 {
     class GenFunc
     {
-        public string[] xAxis_DoughnutGraph;
-        public string[] yAxis_DoughnutGraph;
+        public List<string> rowNames;
+        public List<string> columnNames;
 
-        DataTable dt = new DataTable();
+        public GenFunc()
+        {
+            rowNames = RowNames();
+            columnNames = ColumnNames();
+        }
+
+        //DataTable dt = new DataTable();
 
         public List<string> RowNames()
         {
@@ -84,6 +90,7 @@ namespace musk_reports
 
         public DataTable datatableSetup()
         {
+            DataTable dt = new DataTable();
             DataRow row;
 
             dt.Columns.Add("SubSections", typeof(string));
@@ -97,7 +104,7 @@ namespace musk_reports
             dt.Columns.Add("Misc", typeof(int));
             dt.Columns.Add("Monthly Total", typeof(int));
 
-            List<string> s = new GenFunc().RowNames();
+            List<string> s = rowNames;
             for (int i = 0; i < s.Count(); i++)
             {
                 row = dt.NewRow();
@@ -105,23 +112,23 @@ namespace musk_reports
                 dt.Rows.Add(row);
             }
 
-            foreach (var i in new GenFunc().ColumnNames())
+            foreach (var column in columnNames)
             {
-                string Command = "SELECT * FROM Data INNER JOIN Header ON DataSetID=Header.HeaderID AND Header.Site='" + i + "'";
-                List<Data> d = new GenFunc().fetchData(Command);
+                string Command = "SELECT * FROM Data INNER JOIN Header ON DataSetID=Header.HeaderID AND Header.Site='" + column + "'";
+                List<Data> d = fetchData(Command);
 
-                foreach (var j in d)
+                foreach (var dataPoint in d)
                 {
-                    string temp = dt.Rows[j.InterventionNo][i].ToString();
+                    string temp = dt.Rows[dataPoint.InterventionNo][column].ToString();
                     if (temp == "")
                     {
-                        dt.Rows[j.InterventionNo][i] = j.Interventions;
+                        dt.Rows[dataPoint.InterventionNo][column] = dataPoint.Interventions;
                     }
                     else
                     {
                         int intTemp = Int16.Parse(temp);
-                        intTemp += j.Interventions;
-                        dt.Rows[j.InterventionNo][i] = intTemp;
+                        intTemp += dataPoint.Interventions;
+                        dt.Rows[dataPoint.InterventionNo][column] = intTemp;
                     }
                 }
             }
@@ -129,19 +136,19 @@ namespace musk_reports
             return dt;
         }
 
-        public int getAxis()
+        public Tuple<string[], int[]> getAxis(DataTable dt)
         {
-            string[] xAxis_DoughnutGraph = new string[RowNames().Count()];
-            RowNames().CopyTo(xAxis_DoughnutGraph);
+            string[] xAxis_DoughnutGraph = new string[rowNames.Count()];
+            rowNames.CopyTo(xAxis_DoughnutGraph);
 
-            int[] yAxis_DoughnutGraph = new int[RowNames().Count()];
+            int[] yAxis_DoughnutGraph = new int[rowNames.Count()];
             //this loop adds up each of the rows
             int count = 0;
 
-            for (var row = 1; row < RowNames().Count(); row++)
+            for (var row = 1; row < rowNames.Count(); row++)
             {
                 yAxis_DoughnutGraph[row] = 0;
-                for (var j = 1; j < ColumnNames().Count(); j++)
+                for (var j = 1; j < columnNames.Count(); j++)
                 {
                     string temp = dt.Rows[row][j].ToString();
                     if (temp != "")
@@ -173,8 +180,47 @@ namespace musk_reports
                 }
             }
 
-            return count;
+            return new Tuple<string[], int[]>(x1, y1);
         }
 
+        public Tuple<string[], int[]> getSpecificAxis(DataTable dt, int columnIndex)
+        {
+            string[] xAxis = new string[rowNames.Count()];
+            int[] yAxis = new int[rowNames.Count()];
+
+            rowNames.CopyTo(xAxis);
+            int count = 0; // to set length for the "Pretty" list
+
+            for (int row = 0; row < yAxis.Length; row++)
+            {
+                try
+                {
+                    yAxis[row] = Int32.Parse(dt.Rows[row][columnIndex].ToString());
+                    xAxis[row] = xAxis[row] + " // " + yAxis[row].ToString();
+                    count++;
+                }
+                catch
+                {
+                    yAxis[row] = 0;
+                }
+            }
+
+            //this creates the pretty strings
+            string[] x = new string[count];
+            int[] y = new int[count];
+
+            int temp1 = 0;
+            for (var i = 0; i < yAxis.Length; i++)
+            {
+                if (yAxis[i] != 0)
+                {
+                    y[temp1] = yAxis[i];
+                    x[temp1] = xAxis[i];
+                    temp1++;
+                }
+            }
+
+            return new Tuple<string[], int[]>(x, y);
+        }
     }
 }

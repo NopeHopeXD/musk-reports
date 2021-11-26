@@ -32,10 +32,12 @@ namespace musk_reports
             //make a doughnut graph that displays the total infractions, split on the subsections
 
             GenFunc gf = new GenFunc();
-            int count = gf.getAxis();
+            Tuple<string[], int[]> XYaxis = gf.getAxis(dt);
+            string []xAxis = XYaxis.Item1;
+            int[] yAxis = XYaxis.Item2;
 
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            chart1.Series[0].Points.DataBindXY(gf.xAxis_DoughnutGraph, gf.yAxis_DoughnutGraph);
+            chart1.Series[0].Points.DataBindXY(xAxis, yAxis);
             chart1.Legends[0].Enabled = true;
             //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
 
@@ -44,7 +46,32 @@ namespace musk_reports
 
         private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Graphs.Visible = !Graphs.Visible;
+            if (Graphs.Visible)
+            {
+                graphSetup();
+                DispGraphPage.Text = "Show Table";
+            }
+            else
+            {
+                DispGraphPage.Text = "Show Graphs";
+            }
+
+            GenFunc gf = new GenFunc();
+            label2.Text = gf.columnNames[e.ColumnIndex];
+
+            Tuple<string[], int[]> XYaxis = gf.getSpecificAxis(dt, e.ColumnIndex);
+            string[] xAxis = XYaxis.Item1;
+            int[] yAxis = XYaxis.Item2;
+
+            chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            chart1.Series[0].Points.DataBindXY(xAxis, yAxis);
+            chart1.Legends[0].Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
