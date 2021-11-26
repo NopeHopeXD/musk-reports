@@ -40,7 +40,7 @@ namespace musk_reports
             chart1.Series[0].Points.DataBindXY(xAxis, yAxis);
             chart1.Legends[0].Enabled = true;
             //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
-
+            chart1.BackColor = Color.Transparent;
 
         }
 
@@ -96,6 +96,11 @@ namespace musk_reports
         private void Button2_Click(object sender, EventArgs e)
         {
             (new musk_reports.RemoveReport()).Show(); this.Close();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
