@@ -92,5 +92,10 @@ namespace musk_reports
                 DispGraphPage.Text = "Show Graphs";
             }
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.RemoveReport()).Show(); this.Close();
+        }
     }
 }

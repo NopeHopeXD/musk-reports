@@ -120,6 +120,27 @@ namespace musk_reports
             }
             
         }
+
+        public void RemoveData(string tempReportID)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                
+                string tempSQL = "DELETE FROM report WHERE reportID = @reportID";
+                SqlCommand tempSqlCommand = new SqlCommand(tempSQL, conn);
+                tempSqlCommand.Parameters.AddWithValue("@reportID", tempReportID);
+                
+                try {
+                    int temp = tempSqlCommand.ExecuteNonQuery();
+                }
+                catch(Exception error) {
+                    Console.WriteLine(error.Message);
+                }
+                
+                conn.Close();
+            }
+        }
     }
 
     class Data
