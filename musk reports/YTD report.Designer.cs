@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Graphs = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Menu = new System.Windows.Forms.Panel();
             this.DispGraphPage = new System.Windows.Forms.Button();
-            this.Test = new System.Windows.Forms.Button();
             this.TitleBox = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -87,16 +86,16 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(141, 31);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(731, 508);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -110,6 +109,7 @@
             this.Grid.Size = new System.Drawing.Size(1005, 551);
             this.Grid.TabIndex = 2;
             this.Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentClick);
+            this.Grid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellDoubleClick);
             // 
             // label1
             // 
@@ -140,7 +140,6 @@
             // Menu
             // 
             this.Menu.Controls.Add(this.DispGraphPage);
-            this.Menu.Controls.Add(this.Test);
             this.Menu.Location = new System.Drawing.Point(3, 70);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(237, 554);
@@ -155,17 +154,6 @@
             this.DispGraphPage.Text = "Show Graphs";
             this.DispGraphPage.UseVisualStyleBackColor = true;
             this.DispGraphPage.Click += new System.EventHandler(this.DispGraphPage_Click);
-            // 
-            // Test
-            // 
-            this.Test.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Test.Location = new System.Drawing.Point(63, 3);
-            this.Test.Name = "Test";
-            this.Test.Size = new System.Drawing.Size(102, 23);
-            this.Test.TabIndex = 0;
-            this.Test.Text = "Load Report Here";
-            this.Test.UseVisualStyleBackColor = true;
-            this.Test.Click += new System.EventHandler(this.Test_Click);
             // 
             // TitleBox
             // 
@@ -246,7 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel Menu;
-        private System.Windows.Forms.Button Test;
         private System.Windows.Forms.Panel TitleBox;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Button button1;
