@@ -141,6 +141,18 @@ namespace musk_reports
                 conn.Close();
             }
         }
+
+
+        // Saving the data from the 'AddReport.cs' or 'AddNewReport.cs' - idk which one we're using
+        public void dataTableToDatabase()
+        {
+            using (SqlConnection conn = new SqlConnection())
+            {
+                conn.Open();
+                // I tried lots of stuff here, couldn't work it out
+                conn.Close();
+            }
+        }
     }
 
     class Data

@@ -77,7 +77,7 @@ namespace createR
             this.lbltitleReport.AutoSize = true;
             this.lbltitleReport.Location = new System.Drawing.Point(3, 62);
             this.lbltitleReport.Name = "lbltitleReport";
-            this.lbltitleReport.Size = new System.Drawing.Size(412, 20);
+            this.lbltitleReport.Size = new System.Drawing.Size(826, 37);
             this.lbltitleReport.TabIndex = 1;
             this.lbltitleReport.Text = "Health, Safety, Quality and Environmental Site Inspection";
             // 
@@ -217,6 +217,7 @@ namespace createR
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button1
             // 
@@ -278,13 +279,16 @@ namespace createR
             // 
             // addReportF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1284, 651);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "addReportF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overallInformation)).EndInit();
