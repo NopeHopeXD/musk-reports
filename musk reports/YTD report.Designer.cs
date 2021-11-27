@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Graphs = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.panel2.Controls.Add(this.Grid);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(493, 135);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2021, 1065);
             this.panel2.TabIndex = 3;
@@ -71,7 +71,7 @@
             this.Graphs.Controls.Add(this.label2);
             this.Graphs.Controls.Add(this.chart1);
             this.Graphs.Location = new System.Drawing.Point(12, 12);
-            this.Graphs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Graphs.Margin = new System.Windows.Forms.Padding(6);
             this.Graphs.Name = "Graphs";
             this.Graphs.Size = new System.Drawing.Size(2022, 1065);
             this.Graphs.TabIndex = 3;
@@ -95,19 +95,19 @@
             this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
             this.chart1.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(282, 60);
-            this.chart1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chart1.Margin = new System.Windows.Forms.Padding(6);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1462, 977);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -117,7 +117,7 @@
             // 
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Location = new System.Drawing.Point(12, 12);
-            this.Grid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Grid.Margin = new System.Windows.Forms.Padding(6);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.RowHeadersWidth = 82;
@@ -146,7 +146,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 23);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.70039F));
@@ -158,7 +158,7 @@
             // 
             this.Menu.Controls.Add(this.DispGraphPage);
             this.Menu.Location = new System.Drawing.Point(6, 135);
-            this.Menu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Menu.Margin = new System.Windows.Forms.Padding(6);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(474, 1065);
             this.Menu.TabIndex = 1;
@@ -166,7 +166,7 @@
             // DispGraphPage
             // 
             this.DispGraphPage.Location = new System.Drawing.Point(126, 98);
-            this.DispGraphPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DispGraphPage.Margin = new System.Windows.Forms.Padding(6);
             this.DispGraphPage.Name = "DispGraphPage";
             this.DispGraphPage.Size = new System.Drawing.Size(204, 44);
             this.DispGraphPage.TabIndex = 2;
@@ -178,7 +178,7 @@
             // 
             this.TitleBox.Controls.Add(this.Label);
             this.TitleBox.Location = new System.Drawing.Point(6, 6);
-            this.TitleBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TitleBox.Margin = new System.Windows.Forms.Padding(6);
             this.TitleBox.Name = "TitleBox";
             this.TitleBox.Size = new System.Drawing.Size(474, 117);
             this.TitleBox.TabIndex = 2;
@@ -200,7 +200,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(493, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2021, 117);
             this.panel1.TabIndex = 4;
@@ -208,7 +208,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(192, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 44);
             this.button2.TabIndex = 1;
@@ -220,7 +220,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.Location = new System.Drawing.Point(0, 44);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 44);
             this.button1.TabIndex = 3;
@@ -232,10 +232,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2568, 1252);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Musk Reports";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
