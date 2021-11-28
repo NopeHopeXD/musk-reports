@@ -121,14 +121,14 @@ namespace musk_reports
             
         }
 
-        public void RemoveData(string tempReportID)
+        public void RemoveReportData(string tempReportID)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
                 
-                string tempSQL = "DELETE FROM report WHERE reportID = @reportID";
-                SqlCommand tempSqlCommand = new SqlCommand(tempSQL, conn);
+                string tempSql = "DELETE FROM report WHERE reportID = @reportID";
+                SqlCommand tempSqlCommand = new SqlCommand(tempSql, conn);
                 tempSqlCommand.Parameters.AddWithValue("@reportID", tempReportID);
                 
                 try {
@@ -137,19 +137,59 @@ namespace musk_reports
                 catch(Exception error) {
                     Console.WriteLine(error.Message);
                 }
+                finally
+                {
+                    //Assuming there's some kind of feedback once the specified report is deleted; if so, the resulting code will be here
+                }
                 
                 conn.Close();
             }
+        }
+
+        public List<Report> GetReportData()
+        {
+            List<Report> tempReportList = new List<Report>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string tempSql = "SELECT * FROM report";
+                SqlCommand tempSqlCommand = new SqlCommand(tempSql, conn);
+                conn.Open();
+                try
+                {
+                    using (SqlDataReader tempReader = tempSqlCommand.ExecuteReader())
+                    {
+                        while(tempReader.Read())
+                        {
+                            Report tempReport = new Report();
+                            tempReport.ReportID = (int)tempReader["ReportID"];
+                            tempReport.StaffID = (int)tempReader["StaffID"];
+                            tempReport.HeaderID = (int)tempReader["HeaderID"];
+                            tempReport.DataSetID = (int)tempReader["DataSetID"];
+                            tempReportList.Add(tempReport);
+                        }
+                    }
+                }
+                catch(Exception error)
+                {
+                    Console.WriteLine(error.Message);
+                }
+
+                conn.Close();
+            }
+
+            return tempReportList;
         }
 
 
         // Saving the data from the 'AddReport.cs' or 'AddNewReport.cs' - idk which one we're using
         public void dataTableToDatabase()
         {
-            using (SqlConnection conn = new SqlConnection())
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
                 // I tried lots of stuff here, couldn't work it out
+
+                // Adam - it's nothing too problematic, just the conn variable missing the actual connection (connStr), should work fine now
                 conn.Close();
             }
         }
@@ -198,5 +238,13 @@ namespace musk_reports
                 this.ActionTaken = data;
             }
         }
+    }
+
+    class Report
+    {
+        public int ReportID;
+        public int StaffID;
+        public int HeaderID;
+        public int DataSetID;
     }
 }
