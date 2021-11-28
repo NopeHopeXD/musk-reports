@@ -13,21 +13,29 @@ namespace musk_reports
     public partial class RemoveReport : Form
     {
 
-        DataTable reportsTable = new DataTable();
+        DataTable reportsDataTable = new DataTable();
+        //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
         DatabaseConnection dbTemp = new DatabaseConnection();
         public RemoveReport()
         {
             InitializeComponent();
             InitializeTable();
-            reportTable.DataSource = reportsTable;
+            //links the completed dataTable to the dataGridView on the form
+            reportTable.DataSource = reportsDataTable;
         }
 
         public void InitializeTable()
         {
-            List<Data> tempData = dbTemp.generalGetData("SELECT * FROM Report");
-            foreach (var i in tempData)
+            //Function runs a SELECT query on the Report table to get the data
+            List<Report> tableData = dbTemp.GetReportData();
+            //Columns and rows added manually, loops through the tableData variable to fill the cells
+            reportsDataTable.Columns.Add("ReportID", typeof(int));
+            reportsDataTable.Columns.Add("StaffID", typeof(int));
+            reportsDataTable.Columns.Add("HeaderID", typeof(int));
+            reportsDataTable.Columns.Add("DataSetID", typeof(int));
+            foreach (var reportInstance in tableData)
             {
-
+                reportsDataTable.Rows.Add(reportInstance.ReportID, reportInstance.StaffID, reportInstance.HeaderID, reportInstance.DataSetID);
             }
         }
 

@@ -125,12 +125,14 @@ namespace musk_reports
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                conn.Open();
-                
+                // The reportID will be received from the form once the user selects it
                 string tempSql = "DELETE FROM report WHERE reportID = @reportID";
                 SqlCommand tempSqlCommand = new SqlCommand(tempSql, conn);
+                // IMPORTANT - Adding the parameters like this helps against SQL injections
                 tempSqlCommand.Parameters.AddWithValue("@reportID", tempReportID);
-                
+
+                conn.Open();
+
                 try {
                     int temp = tempSqlCommand.ExecuteNonQuery();
                 }
@@ -139,7 +141,7 @@ namespace musk_reports
                 }
                 finally
                 {
-                    //Assuming there's some kind of feedback once the specified report is deleted; if so, the resulting code will be here
+                    //Assuming there's some kind of feedback once the specified report is deleted
                 }
                 
                 conn.Close();
@@ -189,7 +191,11 @@ namespace musk_reports
                 conn.Open();
                 // I tried lots of stuff here, couldn't work it out
 
-                // Adam - it's nothing too problematic, just the conn variable missing the actual connection (connStr), should work fine now
+                /** Adam - it's nothing too problematic, just the conn variable missing the actual connection (connStr), should work fine now
+                 *  As for the actual saving to the database, the general format should be the same as for the data read functions
+                 *  Instead of the reader, the SqlCommand needs to be prepared, connection opened and then the query executed using something like .ExecuteNonQuery()
+                 *  You can look at RemoveReportData() as an example, though warning I haven't tested it yet lol
+                 **/
                 conn.Close();
             }
         }
