@@ -103,7 +103,7 @@ namespace musk_reports
 
                 SqlCommand sqlCommand = new SqlCommand(SQLCommand, cn);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
-                while (reader.Read())
+                while (reader.Read()) 
                 {
                     Data d = new Data();
                     d.DataID = (int)reader["DataID"];
@@ -119,7 +119,7 @@ namespace musk_reports
                 cn.Close();
             }
             
-        }
+        }//test
 
         public void RemoveReportData(string tempReportID)
         {

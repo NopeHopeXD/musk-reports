@@ -41,5 +41,9 @@ namespace musk_reports
             cnn.Close();
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
