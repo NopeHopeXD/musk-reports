@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace musk_reports
 {
-    public partial class RemoveReport : Form
+    public partial class ListReports : Form
     {
 
         DataTable reportsDataTable = new DataTable();
         //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
         DatabaseConnection dbTemp = new DatabaseConnection();
-        public RemoveReport()
+        public ListReports()
         {
             InitializeComponent();
             InitializeTable();
@@ -42,6 +42,21 @@ namespace musk_reports
         private void button1_Click(object sender, EventArgs e)
         {
             (new musk_reports.Form1()).Show(); this.Close();
+        }
+
+        private void reportTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

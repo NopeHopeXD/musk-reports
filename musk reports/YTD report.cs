@@ -95,7 +95,7 @@ namespace musk_reports
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            (new musk_reports.RemoveReport()).Show(); this.Close();
+            (new musk_reports.ListReports()).Show(); this.Close();
         }
 
         private void chart1_Click(object sender, EventArgs e)
