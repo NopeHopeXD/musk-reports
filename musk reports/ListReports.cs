@@ -58,5 +58,15 @@ namespace musk_reports
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.Form3()).Show(); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
