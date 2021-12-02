@@ -248,6 +248,42 @@ namespace musk_reports
         public int HeaderID;
         public int DataSetID;
     }
+
+    class Header
+    {
+        /* Attributes - - - - - - - - - - - - - - - - - - - - */
+
+
+        public int HeaderID;
+        public string Site;
+        public string WorkArea;
+        public string Supervisor;
+        public string JobDesc;
+        public DateTime Date;
+        public string Type;
+
+
+        /* Methods  - - - - - - - - - - - - - - - - - - - - - */
+
+        // Set Variables for Header
+        public void setVars(string str, string header)
+        {
+
+            // Switch-Case for setting up variables
+            switch (str)
+            {
+                case "HeaderID":
+                    this.HeaderID = Int16.Parse(header);
+                    break;
+                case "Comment":
+                    this.Site = header;
+                    break;
+                case "ActionTaken":
+                    this.ActionTaken = header;
+                    break;
+            }
+        }
+    }
 }
 
 
