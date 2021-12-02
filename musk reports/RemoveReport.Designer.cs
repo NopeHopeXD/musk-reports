@@ -42,8 +42,8 @@ namespace musk_reports
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.44444F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.55556F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.36752F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.63248F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.reportTable, 1, 1);
@@ -52,7 +52,7 @@ namespace musk_reports
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.16427F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.83572F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 627);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 500);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -62,7 +62,7 @@ namespace musk_reports
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 69);
+            this.label1.Size = new System.Drawing.Size(168, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Delete Report";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,14 +70,14 @@ namespace musk_reports
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(247, 3);
+            this.panel1.Location = new System.Drawing.Point(177, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1009, 63);
+            this.panel1.Size = new System.Drawing.Size(639, 49);
             this.panel1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 24);
+            this.button1.Location = new System.Drawing.Point(0, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -87,11 +87,13 @@ namespace musk_reports
             // 
             // reportTable
             // 
+            this.reportTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.reportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reportTable.Location = new System.Drawing.Point(247, 72);
+            this.reportTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportTable.Location = new System.Drawing.Point(177, 58);
             this.reportTable.Name = "reportTable";
             this.reportTable.RowHeadersWidth = 82;
-            this.reportTable.Size = new System.Drawing.Size(1010, 551);
+            this.reportTable.Size = new System.Drawing.Size(639, 439);
             this.reportTable.TabIndex = 3;
             // 
             // RemoveReport
@@ -100,7 +102,7 @@ namespace musk_reports
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1284, 651);
+            this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RemoveReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

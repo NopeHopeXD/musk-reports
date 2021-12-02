@@ -182,6 +182,37 @@ namespace musk_reports
             return tempReportList;
         }
 
+        public string GetStaffNameFromID(int staffID)
+        {
+            string temp = "";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string tempSql = "SELECT Name FROM Staff WHERE StaffID = @StaffID";
+                SqlCommand tempSqlCommand = new SqlCommand(tempSql, conn);
+                tempSqlCommand.Parameters.AddWithValue("@StaffID", staffID);
+
+                conn.Open();
+                try
+                {
+                    using (SqlDataReader tempReader = tempSqlCommand.ExecuteReader())
+                    {
+                        while (tempReader.Read())
+                        {
+                            temp = (string)tempReader["Name"];
+                        }
+                    }
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine(error.Message);
+                }
+
+                conn.Close();
+            }
+
+            return temp;
+        }
 
         // Saving the data from the 'AddReport.cs' or 'AddNewReport.cs' - idk which one we're using
         public void dataTableToDatabase()

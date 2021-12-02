@@ -30,12 +30,13 @@ namespace musk_reports
             List<Report> tableData = dbTemp.GetReportData();
             //Columns and rows added manually, loops through the tableData variable to fill the cells
             reportsDataTable.Columns.Add("ReportID", typeof(int));
-            reportsDataTable.Columns.Add("StaffID", typeof(int));
+            reportsDataTable.Columns.Add("Staff Name", typeof(string));
             reportsDataTable.Columns.Add("HeaderID", typeof(int));
             reportsDataTable.Columns.Add("DataSetID", typeof(int));
             foreach (var reportInstance in tableData)
             {
-                reportsDataTable.Rows.Add(reportInstance.ReportID, reportInstance.StaffID, reportInstance.HeaderID, reportInstance.DataSetID);
+                string tempStaffName = dbTemp.GetStaffNameFromID(reportInstance.StaffID);
+                reportsDataTable.Rows.Add(reportInstance.ReportID, tempStaffName, reportInstance.HeaderID, reportInstance.DataSetID);
             }
         }
 
