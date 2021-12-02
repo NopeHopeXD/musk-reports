@@ -14,8 +14,10 @@ namespace musk_reports
     {
 
         DataTable reportsDataTable = new DataTable();
+        string tempReportIDFromForm = string.Empty;
         //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
         DatabaseConnection dbTemp = new DatabaseConnection();
+        List<Report> tableData;
         public RemoveReport()
         {
             InitializeComponent();
@@ -27,12 +29,13 @@ namespace musk_reports
         public void InitializeTable()
         {
             //Function runs a SELECT query on the Report table to get the data
-            List<Report> tableData = dbTemp.GetReportData();
+            tableData = dbTemp.GetReportData();
             //Columns and rows added manually, loops through the tableData variable to fill the cells
             reportsDataTable.Columns.Add("ReportID", typeof(int));
             reportsDataTable.Columns.Add("Staff Name", typeof(string));
             reportsDataTable.Columns.Add("HeaderID", typeof(int));
             reportsDataTable.Columns.Add("DataSetID", typeof(int));
+
             foreach (var reportInstance in tableData)
             {
                 string tempStaffName = dbTemp.GetStaffNameFromID(reportInstance.StaffID);
@@ -43,6 +46,24 @@ namespace musk_reports
         private void button1_Click(object sender, EventArgs e)
         {
             (new musk_reports.Form1()).Show(); this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tempReportIDFromForm = reportIDTextBox.Text;
+            if (tempReportIDFromForm != "")
+            {
+                foreach (var reportInstance in tableData)
+                {
+                    
+                }
+            }
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
