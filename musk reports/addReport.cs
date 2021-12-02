@@ -76,6 +76,38 @@ namespace createR
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            DataTable reportsDataTable = new DataTable();
+            //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
+            DatabaseConnection dbTemp = new DatabaseConnection();
+            dbTemp.Open();
+
+            string SQL = "", tableName = "report";
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                SQL = @"INSERT INTO " + tableName + " VALUES (";
+                for (int col = 0; col < dataGridView1.ColumnCount; col++)
+                {
+                    string data = "";
+                    if (dataGridView1.Rows[i].Cells[col].Value != null)
+                    {
+                        data = dataGridView1.Rows[i].Cells[col].Value.ToString();
+                    }
+                    SQL += "'" + data.Trim() + "'";
+                    if (col < dataGridView1.ColumnCount - 1)
+                    {
+                        SQL += ",";
+                    }
+                }
+                SQL += ")";
+                string finalSQL = SQL;
+                //INSERT to DB the finalSQL
+                using (SqlCommand comm = new SqlCommand(finalSQL, dbTemp))
+                {
+                    comm.ExecuteNonQuery();
+                }
+            }
+
+            dbTemp.Close();
 
         }
     }
