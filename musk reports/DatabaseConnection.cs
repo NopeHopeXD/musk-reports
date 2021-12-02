@@ -228,7 +228,7 @@ namespace musk_reports
                 case "Interventions":
                     this.Interventions = Int16.Parse(data);
                     break;
-                case "Comment":
+                case "Comment": 
                     this.Comment = data;
                     break;
                 case "ActionTaken":
