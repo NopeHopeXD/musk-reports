@@ -9,9 +9,11 @@ namespace musk_reports
 {
     class GenFunc
     {
+        /* Attributes - - - - - - - - - - - - - - - - - - - - */
         public List<string> rowNames;
         public List<string> columnNames;
 
+        // Can be called to setup both row and column names
         public GenFunc()
         {
             rowNames = RowNames();
@@ -20,6 +22,7 @@ namespace musk_reports
 
         //DataTable dt = new DataTable();
 
+        // Row Names setup
         public List<string> RowNames()
         {
             List<string> s = new List<string>();
@@ -58,6 +61,7 @@ namespace musk_reports
             return s;
         }
 
+        // Column Names setup
         public List<string> ColumnNames()
         {
             List<string> s = new List<string>();
@@ -75,21 +79,21 @@ namespace musk_reports
             return s;
         }
 
+        // Fetch data from SQL
         public List<Data> fetchData(string Command)
         {
-            //fuck sql just sayin XD
-
+            // Create database connection, and send command
             DatabaseConnection dbConn = new DatabaseConnection();
             dbConn.getData(Command);
 
-            //set up table for data
-
+            // Return data from the SQL command
             return dbConn.data;
-
         }
 
+        // Setup the DataTable
         public DataTable datatableSetup()
         {
+            // Create new DataTable
             DataTable dt = new DataTable();
             DataRow row;
 
@@ -104,6 +108,7 @@ namespace musk_reports
             dt.Columns.Add("Misc", typeof(int));
             dt.Columns.Add("Monthly Total", typeof(int));
 
+            // For every row name, add the names under SubSections
             List<string> s = rowNames;
             for (int i = 0; i < s.Count(); i++)
             {
@@ -112,11 +117,13 @@ namespace musk_reports
                 dt.Rows.Add(row);
             }
 
+            // For every column, get data from SQL Database...
             foreach (var column in columnNames)
             {
                 string Command = "SELECT * FROM Data INNER JOIN Header ON DataSetID=Header.HeaderID AND Header.Site='" + column + "'";
                 List<Data> d = fetchData(Command);
 
+                // ... then get every value under the column, and add to table.
                 foreach (var dataPoint in d)
                 {
                     string temp = dt.Rows[dataPoint.InterventionNo][column].ToString();
@@ -133,18 +140,22 @@ namespace musk_reports
                 }
             }
 
+            // Return all the collected data.
             return dt;
         }
 
+        // Get the Axis ready for the Graph
         public Tuple<string[], int[]> getAxis(DataTable dt)
         {
+            // Copy row names to the x axis of the donut graph
             string[] xAxis_DoughnutGraph = new string[rowNames.Count()];
             rowNames.CopyTo(xAxis_DoughnutGraph);
 
+            // Copy row values to the y axis of the donut graph
             int[] yAxis_DoughnutGraph = new int[rowNames.Count()];
-            //this loop adds up each of the rows
+            
+            // For loop that adds up each of the rows
             int count = 0;
-
             for (var row = 1; row < rowNames.Count(); row++)
             {
                 yAxis_DoughnutGraph[row] = 0;
@@ -166,9 +177,11 @@ namespace musk_reports
                 }
             }
 
+            // Create Axis arrays from the length
             string[] x1 = new string[count];
             int[] y1 = new int[count];
 
+            // For loop that fills up the Axis arrays
             int temp1 = 0;
             for (var i = 0; i < yAxis_DoughnutGraph.Length; i++)
             {
@@ -176,15 +189,17 @@ namespace musk_reports
                 {
                     y1[temp1] = yAxis_DoughnutGraph[i];
                     x1[temp1] = xAxis_DoughnutGraph[i];
-                    temp1++;
+                    temp1++; // Increment count
                 }
             }
 
             return new Tuple<string[], int[]>(x1, y1);
         }
 
+        // Tuple of the Specific Axis values
         public Tuple<string[], int[]> getSpecificAxis(DataTable dt, int columnIndex)
         {
+            // 
             string[] xAxis = new string[rowNames.Count()];
             int[] yAxis = new int[rowNames.Count()];
 
