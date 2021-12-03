@@ -109,6 +109,46 @@ namespace createR
 
             dbTemp.Close();
 
+            //Sorana - yesterday I tried doing a similar thing on Data and Header tables
+            //but .ExecuteNonQuery() kept returning error no matter what changes I'd make
+            //I will come back at it later today
+
+            /*string InsertDataInDB;
+            try
+            {
+                using (SqlConnection connec = new SqlConnection(ConnecString))
+                {
+                    using (SqlCommand command_c = new SqlCommand())
+                    {
+                        command_c.Connection = connec;
+                        connec.Open();
+
+                        //first table/header
+                        for (int i = 0; i < overallInformation.Rows.Count; i++)
+                        {
+                            InsertDataInDB = @"INSERT INTO Header VALUES ("
+                                + overallInformation.Rows[i].Cells["Site"].Value + ", "
+                                + overallInformation.Rows[i].Cells["Work Area"].Value + ", "
+                                + overallInformation.Rows[i].Cells["Supervisor"].Value + ", "
+                                + overallInformation.Rows[i].Cells["Job Desc"].Value + ", "
+                                + overallInformation.Rows[i].Cells["Date"].Value + ", "
+                                + overallInformation.Rows[i].Cells["Type"].Value + ");";
+                            command_c.CommandText = InsertDataInDB;
+                        }
+
+                        //2nd table/Inspection
+                        for (int j = 0; j < dgInpectionForm.Rows.Count; j++)
+                        {
+                            InsertDataInDB = @"INSERT INTO Data VALUES ("
+                                + dgInpectionForm.Rows[j].Cells["Interventions"].Value + ", "
+                                + dgInpectionForm.Rows[j].Cells["Comment"].Value + ", "
+                                + dgInpectionForm.Rows[j].Cells["Completed"].Value + ", "
+                                + dgInpectionForm.Rows[j].Cells["Action Taken"].Value + ", "
+                        }
+                    }
+                }
+            } */
+
         }
     }
 }
