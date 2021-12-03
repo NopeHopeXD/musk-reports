@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace createR
+namespace musk_reports
 {
     public partial class addReportF : Form
     {
@@ -76,7 +76,7 @@ namespace createR
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DataTable reportsDataTable = new DataTable();
+            /*DataTable reportsDataTable = new DataTable();
             //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
             DatabaseConnection dbTemp = new DatabaseConnection();
             dbTemp.Open();
@@ -107,7 +107,7 @@ namespace createR
                 }
             }
 
-            dbTemp.Close();
+            dbTemp.Close();*/
 
             //Sorana - yesterday I tried doing a similar thing on Data and Header tables
             //but .ExecuteNonQuery() kept returning error no matter what changes I'd make

@@ -76,7 +76,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new createR.addReportF()).Show(); this.Close();
+            (new addReportF()).Show(); this.Close();
         }
 
         private void DispGraphPage_Click(object sender, EventArgs e)

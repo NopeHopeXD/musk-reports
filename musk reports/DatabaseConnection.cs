@@ -278,9 +278,9 @@ namespace musk_reports
                 case "Comment":
                     this.Site = header;
                     break;
-                case "ActionTaken":
+                /*case "ActionTaken":
                     this.ActionTaken = header;
-                    break;
+                    break;*/
             }
         }
     }
