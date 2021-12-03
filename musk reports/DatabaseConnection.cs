@@ -109,7 +109,7 @@ namespace musk_reports
 
 
         // ! - Remove the Report Data - NOT USED
-        public void RemoveReportData(string tempReportID)
+        public void RemoveReportData(int tempReportID)
         {
             // Create new SQL Connection
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -190,6 +190,37 @@ namespace musk_reports
 
             // Return the List containing the Report's Data
             return tempReportList;
+        }
+
+        public string GetStaffNameFromID(int staffID)
+        {
+            string temp = "";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string tempSql = "SELECT Name FROM Staff WHERE StaffID = @StaffID";
+                SqlCommand tempSqlCommand = new SqlCommand(tempSql, conn);
+                tempSqlCommand.Parameters.AddWithValue("@StaffID", staffID);
+
+                conn.Open();
+                try
+                {
+                    using (SqlDataReader tempReader = tempSqlCommand.ExecuteReader())
+                    {
+                        while (tempReader.Read())
+                        {
+                            temp = (string)tempReader["Name"];
+                        }
+                    }
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine(error.Message);
+                }
+
+                conn.Close();
+            }
+            return temp;
         }
     }
 
@@ -278,9 +309,9 @@ namespace musk_reports
                 case "Comment":
                     this.Site = header;
                     break;
-                case "ActionTaken":
+                /*case "ActionTaken":
                     this.ActionTaken = header;
-                    break;
+                    break;*/
             }
         }
     }

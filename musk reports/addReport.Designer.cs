@@ -1,5 +1,5 @@
 ﻿
-namespace createR
+namespace musk_reports
 {
     partial class addReportF
     {

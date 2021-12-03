@@ -76,7 +76,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new createR.addReportF()).Show(); this.Close();
+            (new addReportF()).Show(); this.Close();
         }
 
         private void DispGraphPage_Click(object sender, EventArgs e)
@@ -106,6 +106,11 @@ namespace musk_reports
         private void label2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            (new RemoveReport()).Show(); this.Close();
         }
     }
 }
