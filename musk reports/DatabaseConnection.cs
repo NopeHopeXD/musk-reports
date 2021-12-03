@@ -11,18 +11,16 @@ namespace musk_reports
     class DatabaseConnection
     {
         /* Attributes - - - - - - - - - - - - - - - - - - - - */
-        
         private static DatabaseConnection _instance;
         private static string connStr;
 
-        //SQL conn obj to stor db connection
+        // SQL connection object to store db connection
         private SqlConnection connToDB;
 
-        // Create List from 
+        // Create List to store data
         public List<Data> data = new List<Data>();
 
-        //constructors
-
+        // Constructors
         public DatabaseConnection() {
             connStr = Properties.Settings.Default.DBConnStr;
         }

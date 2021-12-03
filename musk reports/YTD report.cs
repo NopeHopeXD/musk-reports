@@ -13,8 +13,10 @@ namespace musk_reports
     public partial class Form1 : Form
     {
 
+        // Run "datatableSetup" from GenFunc.cs
         DataTable dt = new GenFunc().datatableSetup();
 
+        // Initialise Form1 and set DataSource to 'dt'
         public Form1()
         {
             InitializeComponent();
@@ -27,19 +29,20 @@ namespace musk_reports
             
         }
 
+        // Set up the Graph
         private void graphSetup()
         {
-            //make a doughnut graph that displays the total infractions, split on the subsections
-
+            // Make a doughnut graph that displays the total infractions, split on the subsections
             GenFunc gf = new GenFunc();
             Tuple<string[], int[]> XYaxis = gf.getAxis(dt);
             string[] xAxis = XYaxis.Item1;
             int[] yAxis = XYaxis.Item2;
 
+            // Format the Pi Chart
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             chart1.Series[0].Points.DataBindXY(xAxis, yAxis);
             chart1.Legends[0].Enabled = true;
-            //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+            //chart1.ChartAreas[0].Area3DStyle.Enable3D = true;    // Make it 3D
             chart1.BackColor = Color.Transparent;
 
         }
@@ -49,53 +52,62 @@ namespace musk_reports
 
         }
 
+        // The Button that switches between the Table and the Graph
         private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Switch Boolean
             Graphs.Visible = !Graphs.Visible;
-            if (Graphs.Visible)
-            {
+            
+            // Change the Button text, and run graphSetup method
+            if (Graphs.Visible) {
                 graphSetup();
                 DispGraphPage.Text = "Show Table";
-            }
-            else
-            {
+            } else {
                 DispGraphPage.Text = "Show Graphs";
             }
 
+            // New Object getting the row and column names
             GenFunc gf = new GenFunc();
             label2.Text = gf.columnNames[e.ColumnIndex];
 
+            // Lable the Axis and that
             Tuple<string[], int[]> XYaxis = gf.getSpecificAxis(dt, e.ColumnIndex);
             string[] xAxis = XYaxis.Item1;
             int[] yAxis = XYaxis.Item2;
 
+            // Set up Graph and that
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             chart1.Series[0].Points.DataBindXY(xAxis, yAxis);
             chart1.Legends[0].Enabled = true;
         }
 
+        // Add Report Button
         private void button1_Click(object sender, EventArgs e)
         {
-            (new createR.addReportF()).Show(); this.Close();
+            (new createR.addReportF()).Show();
+            this.Close();
         }
 
+        // The Button that switches between the Table and the Graph
         private void DispGraphPage_Click(object sender, EventArgs e)
         {
+            // Switch Boolean
             Graphs.Visible = !Graphs.Visible;
-            if (Graphs.Visible)
-            {
+            
+            // Change the Button text, and run the graphSetup method
+            if (Graphs.Visible) {
                 graphSetup();
                 DispGraphPage.Text = "Show Table";
-            }
-            else
-            {
+            } else {
                 DispGraphPage.Text = "Show Graphs";
             }
         }
 
+        // List Report Button 
         private void Button2_Click(object sender, EventArgs e)
         {
-            (new musk_reports.ListReports()).Show(); this.Close();
+            (new musk_reports.ListReports()).Show();
+            this.Close();
         }
 
         private void chart1_Click(object sender, EventArgs e)
