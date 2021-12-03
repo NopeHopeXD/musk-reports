@@ -121,7 +121,7 @@ namespace musk_reports
             
         }
 
-        public void RemoveReportData(string tempReportID)
+        public void RemoveReportData(int tempReportID)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -138,10 +138,6 @@ namespace musk_reports
                 }
                 catch(Exception error) {
                     Console.WriteLine(error.Message);
-                }
-                finally
-                {
-                    //Assuming there's some kind of feedback once the specified report is deleted
                 }
                 
                 conn.Close();

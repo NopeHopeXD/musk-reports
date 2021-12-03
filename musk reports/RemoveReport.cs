@@ -14,7 +14,7 @@ namespace musk_reports
     {
 
         DataTable reportsDataTable = new DataTable();
-        string tempReportIDFromForm = string.Empty;
+        int tempReportIDFromForm = -1;
         //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
         DatabaseConnection dbTemp = new DatabaseConnection();
         List<Report> tableData;
@@ -50,13 +50,37 @@ namespace musk_reports
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tempReportIDFromForm = reportIDTextBox.Text;
-            if (tempReportIDFromForm != "")
+            int temp = (int)reportIDBox.Value;
+
+            if (temp > 0)
             {
+                bool matchFound = false;
                 foreach (var reportInstance in tableData)
                 {
+                    if (reportInstance.ReportID == temp)
+                    {
+                        matchFound = true;
+                        tempReportIDFromForm = temp;
+                        break;
+                    }
+                }
+                if (matchFound)
+                {
+                    var deleteConfirmation = MessageBox.Show("This action will permanently delete the report. Continue?", "ALERT", MessageBoxButtons.YesNo);
+                    if (deleteConfirmation == DialogResult.Yes)
+                    {
+                        dbTemp.RemoveReportData(tempReportIDFromForm);
+                    }
                     
                 }
+                else
+                {
+                    MessageBox.Show("No report with a matching ID has been found.", "ALERT");
+                }
+            }
+            else
+            {
+                MessageBox.Show("The provided report ID is not within the valid range.", "ALERT");
             }
             
         }

@@ -35,14 +35,14 @@ namespace musk_reports
             this.button1 = new System.Windows.Forms.Button();
             this.reportTable = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.reportIDBox = new System.Windows.Forms.NumericUpDown();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportTable)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportIDBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -106,29 +106,12 @@ namespace musk_reports
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.numericUpDown1);
+            this.panel2.Controls.Add(this.reportIDBox);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(3, 58);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(168, 439);
             this.panel2.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(37, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Delete Selected";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(37, 39);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown1.TabIndex = 2;
             // 
             // label2
             // 
@@ -141,6 +124,23 @@ namespace musk_reports
             this.label2.Text = "Select the ID of the report to be deleted";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // reportIDBox
+            // 
+            this.reportIDBox.Location = new System.Drawing.Point(37, 39);
+            this.reportIDBox.Name = "reportIDBox";
+            this.reportIDBox.Size = new System.Drawing.Size(93, 20);
+            this.reportIDBox.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(37, 65);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Delete Selected";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // RemoveReport
             // 
@@ -158,7 +158,7 @@ namespace musk_reports
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reportTable)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportIDBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,6 +173,6 @@ namespace musk_reports
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown reportIDBox;
     }
 }
