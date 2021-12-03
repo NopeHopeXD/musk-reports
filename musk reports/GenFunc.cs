@@ -199,34 +199,38 @@ namespace musk_reports
         // Tuple of the Specific Axis values
         public Tuple<string[], int[]> getSpecificAxis(DataTable dt, int columnIndex)
         {
-            // 
+            // Create Arrays for axis of set length
             string[] xAxis = new string[rowNames.Count()];
             int[] yAxis = new int[rowNames.Count()];
 
             rowNames.CopyTo(xAxis);
             int count = 0; // to set length for the "Pretty" list
 
+            // FOR every row ...
             for (int row = 0; row < yAxis.Length; row++)
             {
+                // ... try to set the value,
                 try
                 {
                     yAxis[row] = Int32.Parse(dt.Rows[row][columnIndex].ToString());
                     xAxis[row] = xAxis[row] + " // " + yAxis[row].ToString();
                     count++;
                 }
-                catch
+                catch // else set to 0
                 {
                     yAxis[row] = 0;
                 }
             }
 
-            //this creates the pretty strings
+            // This creates the pretty strings
             string[] x = new string[count];
             int[] y = new int[count];
 
+            // For every row ...
             int temp1 = 0;
             for (var i = 0; i < yAxis.Length; i++)
             {
+                // ... if the row has a value, set the pretty string to have that value.
                 if (yAxis[i] != 0)
                 {
                     y[temp1] = yAxis[i];
