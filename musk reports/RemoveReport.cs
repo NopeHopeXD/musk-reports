@@ -66,7 +66,7 @@ namespace musk_reports
                 }
                 if (matchFound)
                 {
-                    var deleteConfirmation = MessageBox.Show("This action will permanently delete the report. Continue?", "ALERT", MessageBoxButtons.YesNo);
+                    var deleteConfirmation = MessageBox.Show("This action will permanently delete the report of ID "+temp.ToString()+". Continue?", "ALERT", MessageBoxButtons.YesNo);
                     if (deleteConfirmation == DialogResult.Yes)
                     {
                         dbTemp.RemoveReportData(tempReportIDFromForm);

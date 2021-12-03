@@ -128,6 +128,11 @@ namespace musk_reports
             // reportIDBox
             // 
             this.reportIDBox.Location = new System.Drawing.Point(37, 39);
+            this.reportIDBox.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.reportIDBox.Name = "reportIDBox";
             this.reportIDBox.Size = new System.Drawing.Size(93, 20);
             this.reportIDBox.TabIndex = 2;

@@ -109,7 +109,7 @@ namespace musk_reports
 
 
         // ! - Remove the Report Data
-        public void RemoveReportData(string tempReportID)
+        public void RemoveReportData(int tempReportID)
         {
             // Create new SQL Connection
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -187,7 +187,6 @@ namespace musk_reports
             // Return the List containing the Report's Data
             return tempReportList;
         }
-    }
 
         public string GetStaffNameFromID(int staffID)
         {
@@ -217,6 +216,9 @@ namespace musk_reports
 
                 conn.Close();
             }
+            return temp;
+        }
+    }
 
 class Data
     {
@@ -358,4 +360,4 @@ public void dataTableToDatabase() {
     }
 }
 
-   
+*/
