@@ -93,6 +93,12 @@
     <Compile Include="ListReports.Designer.cs">
       <DependentUpon>ListReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="RemoveReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveReport.designer.cs">
+      <DependentUpon>RemoveReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="YTD report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="ListReports.resx">
       <DependentUpon>ListReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveReport.resx">
+      <DependentUpon>RemoveReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YTD report.resx">
       <DependentUpon>YTD report.cs</DependentUpon>

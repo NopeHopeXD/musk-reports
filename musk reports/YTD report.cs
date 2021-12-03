@@ -107,5 +107,10 @@ namespace musk_reports
         {
             
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            (new RemoveReport()).Show(); this.Close();
+        }
     }
 }
