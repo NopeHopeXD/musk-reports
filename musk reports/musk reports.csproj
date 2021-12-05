@@ -79,6 +79,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adminform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminform.Designer.cs">
+      <DependentUpon>Adminform.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenFunc.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Form2.cs">
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminform.resx">
+      <DependentUpon>Adminform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

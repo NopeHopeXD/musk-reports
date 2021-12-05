@@ -129,5 +129,11 @@ namespace musk_reports
             (new RemoveReport()).Show();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.Adminform()).Show();
+            
+        }
     }
 }
