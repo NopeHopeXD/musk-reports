@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace musk_reports
 {
     public partial class addReportF : Form
     {
+        public string ConnecString { get; private set; }
+
         public addReportF()
         {
             InitializeComponent();
@@ -76,53 +79,48 @@ namespace musk_reports
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            /*DataTable reportsDataTable = new DataTable();
-            //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
-            DatabaseConnection dbTemp = new DatabaseConnection();
-            dbTemp.Open();
-
-            string SQL = "", tableName = "report";
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                SQL = @"INSERT INTO " + tableName + " VALUES (";
-                for (int col = 0; col < dataGridView1.ColumnCount; col++)
-                {
-                    string data = "";
-                    if (dataGridView1.Rows[i].Cells[col].Value != null)
-                    {
-                        data = dataGridView1.Rows[i].Cells[col].Value.ToString();
-                    }
-                    SQL += "'" + data.Trim() + "'";
-                    if (col < dataGridView1.ColumnCount - 1)
-                    {
-                        SQL += ",";
-                    }
-                }
-                SQL += ")";
-                string finalSQL = SQL;
-                //INSERT to DB the finalSQL
-                using (SqlCommand comm = new SqlCommand(finalSQL, dbTemp))
-                {
-                    comm.ExecuteNonQuery();
-                }
-            }
-
-            dbTemp.Close();*/
-
-            //Sorana - yesterday I tried doing a similar thing on Data and Header tables
-            //but .ExecuteNonQuery() kept returning error no matter what changes I'd make
-            //I will come back at it later today
-
-            /*string InsertDataInDB;
-            try
-            {
+            
                 using (SqlConnection connec = new SqlConnection(ConnecString))
                 {
                     using (SqlCommand command_c = new SqlCommand())
                     {
                         command_c.Connection = connec;
-                        connec.Open();
+                        connec.Open(); //connecstring not initialized
 
+                        /*DataTable reportsDataTable = new DataTable();
+                        //creates a new DatabaseConnection for the purpose of running SQL commands on the Report table
+                        DatabaseConnection dbTemp = new DatabaseConnection();
+                        dbTemp.Open();
+
+                        string SQL = "", tableName = "report";
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            SQL = @"INSERT INTO " + tableName + " VALUES (";
+                            for (int col = 0; col < dataGridView1.ColumnCount; col++)
+                            {
+                                string data = "";
+                                if (dataGridView1.Rows[i].Cells[col].Value != null)
+                                {
+                                    data = dataGridView1.Rows[i].Cells[col].Value.ToString();
+                                }
+                                SQL += "'" + data.Trim() + "'";
+                                if (col < dataGridView1.ColumnCount - 1)
+                                {
+                                    SQL += ",";
+                                }
+                            }
+                            SQL += ")";
+                            string finalSQL = SQL;
+                            //INSERT to DB the finalSQL
+                            using (SqlCommand comm = new SqlCommand(finalSQL, dbTemp))
+                            {
+                                comm.ExecuteNonQuery();
+                            }
+                        }
+
+                        dbTemp.Close();*/
+
+                        string InsertDataInDB;
                         //first table/header
                         for (int i = 0; i < overallInformation.Rows.Count; i++)
                         {
@@ -134,6 +132,7 @@ namespace musk_reports
                                 + overallInformation.Rows[i].Cells["Date"].Value + ", "
                                 + overallInformation.Rows[i].Cells["Type"].Value + ");";
                             command_c.CommandText = InsertDataInDB;
+                            command_c.ExecuteNonQuery();
                         }
 
                         //2nd table/Inspection
@@ -143,11 +142,14 @@ namespace musk_reports
                                 + dgInpectionForm.Rows[j].Cells["Interventions"].Value + ", "
                                 + dgInpectionForm.Rows[j].Cells["Comment"].Value + ", "
                                 + dgInpectionForm.Rows[j].Cells["Completed"].Value + ", "
-                                + dgInpectionForm.Rows[j].Cells["Action Taken"].Value + ", "
+                                + dgInpectionForm.Rows[j].Cells["Action Taken"].Value + ");";
+                            command_c.CommandText = InsertDataInDB;
+                            command_c.ExecuteNonQuery();
                         }
+
                     }
                 }
-            } */
+            
 
         }
     }
