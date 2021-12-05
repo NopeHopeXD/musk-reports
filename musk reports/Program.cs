@@ -20,4 +20,17 @@ namespace musk_reports
             Application.Run();
         }
     }
+
+    //Destiny - sourced from stackoverflow. To set the global reporting peruiod to be used on forms and in queries.
+
+    static class Musk_ReportsGlobalVariables
+    {
+        private static string _globalVarReportingPeriod = "";
+
+        public static string GlobalVarReportingPeriod
+        {
+            get { return _globalVarReportingPeriod; }
+            set { _globalVarReportingPeriod = value; }
+        }
+    }
 }

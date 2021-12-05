@@ -34,5 +34,20 @@ namespace musk_reports
             this.Close();
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + comboBox2.SelectedItem;
+
+        }
     }
 }

@@ -34,10 +34,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -99,47 +99,73 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Set the reporting period";
             // 
-            // monthCalendar1
+            // comboBox1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(17, 271);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.comboBox1.Location = new System.Drawing.Point(17, 238);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(259, 24);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "Number of Days,Weeks,Months,Years";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Day",
+            "Week",
+            "Month",
+            "Year"});
+            this.comboBox2.Location = new System.Drawing.Point(17, 268);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(120, 24);
+            this.comboBox2.TabIndex = 7;
+            this.comboBox2.Text = "Period";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(319, 237);
+            this.label3.Location = new System.Drawing.Point(12, 352);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "End";
+            this.label3.Size = new System.Drawing.Size(180, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Add Staff Members";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // button5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 237);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Start";
-            // 
-            // monthCalendar2
-            // 
-            this.monthCalendar2.Location = new System.Drawing.Point(315, 271);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 9;
+            this.button5.Location = new System.Drawing.Point(17, 298);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 30);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Set Reporting Period";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Adminform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 584);
-            this.Controls.Add(this.monthCalendar2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -164,9 +190,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
+        private System.Windows.Forms.Button button5;
     }
 }
