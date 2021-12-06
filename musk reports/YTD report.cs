@@ -130,9 +130,11 @@ namespace musk_reports
             this.Close();
         }
 
+        // Admin Button
         private void button4_Click(object sender, EventArgs e)
         {
             (new musk_reports.Adminform()).Show();
+            this.Close();
             
         }
     }

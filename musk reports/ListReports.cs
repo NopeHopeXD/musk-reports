@@ -54,9 +54,11 @@ namespace musk_reports
 
         }
 
+        // View Report Button -- Idk what this is supposed to do, show YTD Report maybe?
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // (new musk_reports.ASDF()).Show();
+            // this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -66,7 +68,8 @@ namespace musk_reports
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            (new musk_reports.RemoveReport()).Show();
+            this.Close();
         }
     }
 }

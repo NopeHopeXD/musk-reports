@@ -147,7 +147,7 @@ namespace musk_reports
             // 
             this.button4.Location = new System.Drawing.Point(272, 30);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 28);
+            this.button4.Size = new System.Drawing.Size(166, 28);
             this.button4.TabIndex = 4;
             this.button4.Text = "Sort List of Reports";
             this.button4.UseVisualStyleBackColor = true;
@@ -162,9 +162,9 @@ namespace musk_reports
             this.ClientSize = new System.Drawing.Size(1712, 801);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ListReports";
+            this.Name = "List Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListReports";
+            this.Text = "List Reports";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

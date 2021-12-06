@@ -71,6 +71,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove Report";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -124,7 +125,7 @@
             this.comboBox1.Location = new System.Drawing.Point(26, 372);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(386, 33);
+            this.comboBox1.Size = new System.Drawing.Size(406, 33);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Number of Days,Weeks,Months,Years";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -172,7 +173,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
             this.ClientSize = new System.Drawing.Size(939, 912);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);

@@ -31,6 +31,7 @@ namespace musk_reports
 
         private void button4_Click(object sender, EventArgs e)
         {
+            (new musk_reports.Form1()).Show();
             this.Close();
         }
 
@@ -53,6 +54,13 @@ namespace musk_reports
         private void Adminform_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // Remove Report Button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            (new musk_reports.RemoveReport()).Show();
+            this.Close();
         }
     }
 }
