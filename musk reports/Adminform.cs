@@ -49,5 +49,10 @@ namespace musk_reports
             Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + comboBox2.SelectedItem;
 
         }
+
+        private void Adminform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
