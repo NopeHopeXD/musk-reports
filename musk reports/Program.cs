@@ -16,7 +16,7 @@ namespace musk_reports
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            (new Form1()).Show();
+            (new Form1()).Show();       // Possibly change to Adminform, depends what you chaps think is a better first screen.
             Application.Run();
         }
     }
