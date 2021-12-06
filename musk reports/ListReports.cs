@@ -63,7 +63,7 @@ namespace musk_reports
 
         private void button4_Click(object sender, EventArgs e)
         {
-            (new musk_reports.Form3()).Show(); 
+            (new musk_reports.SortBy()).Show(); 
         }
 
         private void button3_Click(object sender, EventArgs e)

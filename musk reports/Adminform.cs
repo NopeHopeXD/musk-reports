@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace musk_reports
 {
-	public partial class Adminform : Form
+	public partial class AdminForm : Form
 	{
 		/* Attributes - - - - - - - - - - - - - - - - - - - - */
 
@@ -23,7 +23,7 @@ namespace musk_reports
 
 		/* Methods  - - - - - - - - - - - - - - - - - - - - - */
 		
-		public Adminform()
+		public AdminForm()
 		{
 			InitializeComponent();
 		}

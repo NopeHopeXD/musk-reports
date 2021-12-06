@@ -1,6 +1,6 @@
 ﻿namespace musk_reports
 {
-    partial class Form3
+    partial class SortBy
     {
         /// <summary>
         /// Required designer variable.

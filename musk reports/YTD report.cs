@@ -133,7 +133,7 @@ namespace musk_reports
         // Admin Button
         private void button4_Click(object sender, EventArgs e)
         {
-            (new musk_reports.Adminform()).Show();
+            (new musk_reports.AdminForm()).Show();
             this.Close();
             
         }

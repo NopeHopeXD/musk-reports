@@ -1,6 +1,6 @@
 ﻿namespace musk_reports
 {
-    partial class Adminform
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.

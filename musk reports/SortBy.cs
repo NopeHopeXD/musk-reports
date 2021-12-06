@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace musk_reports
 {
-    public partial class Form3 : Form
+    public partial class SortBy : Form
     {
-        public Form3()
+        public SortBy()
         {
             InitializeComponent();
         }

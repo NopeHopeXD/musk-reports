@@ -67,23 +67,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addReport.cs">
+    <Compile Include="AddReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addReport.designer.cs">
-      <DependentUpon>addReport.cs</DependentUpon>
+    <Compile Include="AddReport.designer.cs">
+      <DependentUpon>AddReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="SortBy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="SortBy.Designer.cs">
+      <DependentUpon>SortBy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Adminform.cs">
+    <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adminform.Designer.cs">
-      <DependentUpon>Adminform.cs</DependentUpon>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GenFunc.cs" />
     <Compile Include="DatabaseConnection.cs" />
@@ -107,14 +107,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="addReport.resx">
-      <DependentUpon>addReport.cs</DependentUpon>
+    <EmbeddedResource Include="AddReport.resx">
+      <DependentUpon>AddReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="SortBy.resx">
+      <DependentUpon>SortBy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Adminform.resx">
-      <DependentUpon>Adminform.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
