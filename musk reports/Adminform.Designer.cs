@@ -108,26 +108,14 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.comboBox1.Location = new System.Drawing.Point(26, 372);
+            this.comboBox1.Location = new System.Drawing.Point(26, 380);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(406, 33);
+            this.comboBox1.Size = new System.Drawing.Size(240, 33);
             this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Number of Days,Weeks,Months,Years";
+            this.comboBox1.Text = "Number of - - - - -";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
@@ -138,12 +126,13 @@
             "Week",
             "Month",
             "Year"});
-            this.comboBox2.Location = new System.Drawing.Point(26, 419);
+            this.comboBox2.Location = new System.Drawing.Point(26, 337);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(178, 33);
+            this.comboBox2.Size = new System.Drawing.Size(240, 33);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.Text = "Period";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -159,7 +148,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(26, 466);
+            this.button5.Location = new System.Drawing.Point(26, 423);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(210, 47);
