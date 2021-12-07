@@ -22,13 +22,13 @@ namespace musk_reports
 
 
 		/* Methods  - - - - - - - - - - - - - - - - - - - - - */
-		
+
 		public AdminForm()
 		{
 			InitializeComponent();
 		}
 
-	  
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			(new musk_reports.ListReports()).Show();
@@ -54,7 +54,7 @@ namespace musk_reports
 		// Number of periods selector
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-		   
+
 		}
 
 		// Set Reporting Button
