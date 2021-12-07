@@ -23,6 +23,15 @@ namespace musk_reports
 
         }
 
+
+        private void Form1_Closing(object sender, FormClosingEventArgs e)
+        {
+            // this.Hide();
+            // e.Cancel = true;
+            this.Close();
+        }
+
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
