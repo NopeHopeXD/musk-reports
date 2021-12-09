@@ -79,7 +79,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(276, 263);
+            this.button1.Location = new System.Drawing.Point(295, 197);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 45);
@@ -90,7 +90,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(431, 263);
+            this.button2.Location = new System.Drawing.Point(431, 197);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 45);
@@ -112,8 +112,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::musk_reports.Properties.Resources.MuskReportsLogo;
             this.pictureBox1.ImageLocation = "C:\\Users\\deswyn\\source\\repos\\musk-reports\\musk reports\\MuskReportsLogo.ico";
-            this.pictureBox1.Location = new System.Drawing.Point(29, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 236);
             this.pictureBox1.TabIndex = 8;
@@ -125,7 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(610, 353);
+            this.ClientSize = new System.Drawing.Size(662, 353);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
