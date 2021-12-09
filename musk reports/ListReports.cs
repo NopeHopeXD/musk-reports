@@ -22,6 +22,7 @@ namespace musk_reports
             InitializeTable();
             //links the completed dataTable to the dataGridView on the form
             reportTable.DataSource = reportsDataTable;
+            label3.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
         }
 
         public void InitializeTable()
@@ -41,7 +42,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new musk_reports.Form1()).Show(); this.Close();
+           this.Close();
         }
 
         private void reportTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,19 +58,25 @@ namespace musk_reports
         // View Report Button -- Idk what this is supposed to do, show YTD Report maybe?
         private void button2_Click(object sender, EventArgs e)
         {
-            // (new musk_reports.ASDF()).Show();
-            // this.Close();
+            (new musk_reports.addReportF()).Show();
+            this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            (new musk_reports.SortBy()).Show(); 
-        }
-
+       
         private void button3_Click(object sender, EventArgs e)
         {
             (new musk_reports.RemoveReport()).Show();
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ListReports_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

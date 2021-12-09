@@ -45,14 +45,7 @@ namespace musk_reports
             {
                 MessageBox.Show("Please check your username and password as that combination does not exist");
             }
-            
-
-           
-
-           
-
-
-           
+                      
         }
 
         private void button1_Click(object sender, EventArgs e)

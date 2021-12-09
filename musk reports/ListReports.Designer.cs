@@ -38,6 +38,7 @@ namespace musk_reports
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.reportTable = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportTable)).BeginInit();
@@ -53,7 +54,7 @@ namespace musk_reports
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.reportTable, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 15);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.16427F));
@@ -71,7 +72,6 @@ namespace musk_reports
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(318, 686);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Select a report to delete or view";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -91,11 +91,12 @@ namespace musk_reports
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(330, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1345, 78);
             this.panel1.TabIndex = 2;
@@ -116,14 +117,14 @@ namespace musk_reports
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 28);
             this.button2.TabIndex = 2;
-            this.button2.Text = "View Report";
+            this.button2.Text = "Add Report";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1228, 30);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
@@ -135,12 +136,21 @@ namespace musk_reports
             // 
             this.reportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.reportTable.Location = new System.Drawing.Point(330, 90);
-            this.reportTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportTable.Margin = new System.Windows.Forms.Padding(4);
             this.reportTable.Name = "reportTable";
             this.reportTable.RowHeadersWidth = 82;
             this.reportTable.Size = new System.Drawing.Size(1346, 678);
             this.reportTable.TabIndex = 3;
             this.reportTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reportTable_CellContentClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(309, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "label3";
             // 
             // ListReports
             // 
@@ -151,13 +161,15 @@ namespace musk_reports
             this.ClientSize = new System.Drawing.Size(1381, 675);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Reports";
+            this.Load += new System.EventHandler(this.ListReports_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportTable)).EndInit();
             this.ResumeLayout(false);
 
@@ -173,5 +185,6 @@ namespace musk_reports
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }

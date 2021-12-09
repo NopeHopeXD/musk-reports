@@ -43,7 +43,7 @@ namespace musk_reports
 		private void button4_Click(object sender, EventArgs e)
 		{
 			(new musk_reports.Form1()).Show();
-			this.Close();
+			
 		}
 
 		private void label3_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace musk_reports
 		// Set Reporting Button
 		private void button5_Click(object sender, EventArgs e)
 		{
-			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + comboBox2.SelectedItem;
+			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + "(" + comboBox2.SelectedItem + ")";
 		}
 
 		private void Adminform_Load(object sender, EventArgs e)
@@ -89,23 +89,23 @@ namespace musk_reports
 			// Switch-Case for the values in the lower drop list.
 			switch (chosenPeriod)
             {
-				case "Day":
+				case "Day/s":
 					comboBox1.Items.Clear();
 					for (int i = 0; i < 31; i++) { comboBox1.Items.Add(i+1); }
 					break;
 
-				case "Week":
+				case "Week/s":
 					comboBox1.Items.Clear();
 					for (int i = 0; i < 52; i++) { comboBox1.Items.Add(i + 1); }
 					break;
 
-				case "Month":
+				case "Month/s":
 					comboBox1.Items.Clear();
 					//for (int i = 0; i < 12; i++) { comboBox1.Items.Add(i + 1); }		// Print the month number.
 					foreach (var monthName in monthNamesArray) { comboBox1.Items.Add(monthName); }		// Print the month name.
 					break;
 
-				case "Year":
+				case "Year/s":
 					comboBox1.Items.Clear();
 					for (int i = 2000; i <= 2030; i++) { comboBox1.Items.Add(i); }
 					

@@ -21,6 +21,9 @@ namespace musk_reports
             InitializeComponent();
             Grid.DataSource = dt;
             //graphSetup();
+
+            // This displays the reporting period on the form set in the adminform
+            label3.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -136,6 +139,11 @@ namespace musk_reports
             (new musk_reports.AdminForm()).Show();
             this.Close();
             
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

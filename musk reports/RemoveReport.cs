@@ -89,5 +89,10 @@ namespace musk_reports
         {
 
         }
+
+        private void RemoveReport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
