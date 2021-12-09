@@ -78,7 +78,7 @@ namespace musk_reports
             this.lbltitleReport.AutoSize = true;
             this.lbltitleReport.Location = new System.Drawing.Point(3, 62);
             this.lbltitleReport.Name = "lbltitleReport";
-            this.lbltitleReport.Size = new System.Drawing.Size(826, 37);
+            this.lbltitleReport.Size = new System.Drawing.Size(505, 25);
             this.lbltitleReport.TabIndex = 1;
             this.lbltitleReport.Text = "Health, Safety, Quality and Environmental Site Inspection";
             // 
@@ -263,6 +263,7 @@ namespace musk_reports
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1254, 56);
             this.tableLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -280,7 +281,7 @@ namespace musk_reports
             // 
             // addReportF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
