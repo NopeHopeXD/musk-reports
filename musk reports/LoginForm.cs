@@ -15,6 +15,7 @@ namespace musk_reports
     {
         public Login()
         {
+            //Initialises the form
             InitializeComponent();
         }
 
@@ -43,6 +44,7 @@ namespace musk_reports
             }
             else
             {
+                //Username and password doesn't match the database. Warn the user.
                 MessageBox.Show("Please check your username and password as that combination does not exist");
             }
                       
@@ -50,6 +52,7 @@ namespace musk_reports
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Exits the program.
             MessageBox.Show("Thanks for using Musk Reports.");
             this.Close();
         }

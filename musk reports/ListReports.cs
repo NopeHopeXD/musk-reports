@@ -22,6 +22,7 @@ namespace musk_reports
             InitializeTable();
             //links the completed dataTable to the dataGridView on the form
             reportTable.DataSource = reportsDataTable;
+            //this displas the reporting priod set on the admin form
             label3.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
         }
 
@@ -58,6 +59,7 @@ namespace musk_reports
         // View Report Button -- Idk what this is supposed to do, show YTD Report maybe?
         private void button2_Click(object sender, EventArgs e)
         {
+            //this displays the add reports form and closes the list reports
             (new musk_reports.addReportF()).Show();
             this.Close();
         }
@@ -65,6 +67,7 @@ namespace musk_reports
        
         private void button3_Click(object sender, EventArgs e)
         {
+            //this displays the remove reports form and closes the list reports
             (new musk_reports.RemoveReport()).Show();
             this.Close();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginId = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -112,7 +113,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::musk_reports.Properties.Resources.MuskReportsLogo;
             this.pictureBox1.ImageLocation = "C:\\Users\\deswyn\\source\\repos\\musk-reports\\musk reports\\MuskReportsLogo.ico";
             this.pictureBox1.Location = new System.Drawing.Point(28, 61);
             this.pictureBox1.Name = "pictureBox1";
@@ -137,6 +137,7 @@
             this.Controls.Add(this.loginId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

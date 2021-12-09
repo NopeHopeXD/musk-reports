@@ -31,17 +31,21 @@ namespace musk_reports
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			//this displays the List Reports form
+			
 			(new musk_reports.ListReports()).Show();
 
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
+			//this displays the add reports form
 			(new musk_reports.addReportF()).Show();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
+			//this displays the YTD Reports form
 			(new musk_reports.Form1()).Show();
 			
 		}
@@ -71,9 +75,9 @@ namespace musk_reports
 		// Remove Report Button
 		private void button2_Click(object sender, EventArgs e)
 		{
+			//this displaysthe rmove reports form
 			(new musk_reports.RemoveReport()).Show();
-			this.Close();
-		}
+			
 
 		// Period Selector
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
