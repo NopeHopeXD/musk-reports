@@ -87,7 +87,7 @@ namespace musk_reports
 
 			// Set text of the lower drop list.
 			chosenPeriod = comboBox2.SelectedItem.ToString();
-			comboBox1Text = String.Format("Number of {0}s", chosenPeriod);
+			comboBox1Text = String.Format("Number of {0}", chosenPeriod);
 			comboBox1.Text = comboBox1Text;
 
 			// Switch-Case for the values in the lower drop list.
