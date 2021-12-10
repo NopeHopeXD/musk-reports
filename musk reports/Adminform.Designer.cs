@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 33);
+            this.label1.Location = new System.Drawing.Point(12, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 83);
+            this.button1.Location = new System.Drawing.Point(17, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 41);
             this.button1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(325, 83);
+            this.button2.Location = new System.Drawing.Point(325, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 41);
             this.button2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(175, 83);
+            this.button3.Location = new System.Drawing.Point(175, 244);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 41);
             this.button3.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(459, 83);
+            this.button4.Location = new System.Drawing.Point(459, 244);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(141, 41);
             this.button4.TabIndex = 4;
@@ -94,17 +94,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 179);
+            this.label2.Location = new System.Drawing.Point(12, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 25);
+            this.label2.Size = new System.Drawing.Size(516, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Set the reporting period";
+            this.label2.Text = "Set the reporting period (before selecting a form to display)";
             // 
             // comboBox1
             // 
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 243);
+            this.comboBox1.Location = new System.Drawing.Point(17, 91);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(161, 24);
             this.comboBox1.TabIndex = 6;
@@ -119,7 +119,7 @@
             "Week/s",
             "Month/s",
             "Year/s"});
-            this.comboBox2.Location = new System.Drawing.Point(17, 216);
+            this.comboBox2.Location = new System.Drawing.Point(17, 64);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(161, 24);
             this.comboBox2.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(17, 271);
+            this.button5.Location = new System.Drawing.Point(17, 119);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 30);
             this.button5.TabIndex = 9;

@@ -77,8 +77,8 @@ namespace musk_reports
 		{
 			//this displaysthe rmove reports form
 			(new musk_reports.RemoveReport()).Show();
-			
 
+		}
 		// Period Selector
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
 		{
