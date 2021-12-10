@@ -66,5 +66,10 @@ namespace musk_reports
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

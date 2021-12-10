@@ -46,7 +46,7 @@
             this.loginId.Location = new System.Drawing.Point(272, 100);
             this.loginId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginId.Name = "loginId";
-            this.loginId.Size = new System.Drawing.Size(92, 22);
+            this.loginId.Size = new System.Drawing.Size(150, 33);
             this.loginId.TabIndex = 0;
             this.loginId.Text = "Username";
             this.loginId.Click += new System.EventHandler(this.loginId_Click);
@@ -57,7 +57,7 @@
             this.label2.Location = new System.Drawing.Point(272, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.Size = new System.Drawing.Size(143, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
@@ -66,7 +66,7 @@
             this.textBox1.Location = new System.Drawing.Point(373, 100);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 28);
+            this.textBox1.Size = new System.Drawing.Size(163, 40);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
@@ -74,7 +74,7 @@
             this.textBox2.Location = new System.Drawing.Point(373, 136);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 28);
+            this.textBox2.Size = new System.Drawing.Size(163, 40);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -107,22 +107,23 @@
             this.label1.Location = new System.Drawing.Point(132, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 22);
+            this.label1.Size = new System.Drawing.Size(604, 33);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome to the Musk Reports Application.";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\deswyn\\source\\repos\\musk-reports\\musk reports\\MuskReportsLogo.ico";
+            this.pictureBox1.ImageLocation = "https://media.glassdoor.com/sqll/3559938/musk-process-services-squarelogo-1635937470753.png";
             this.pictureBox1.Location = new System.Drawing.Point(28, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 236);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
