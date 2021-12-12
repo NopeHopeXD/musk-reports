@@ -140,6 +140,20 @@ namespace musk_reports
                 }
             }
 
+            for (int tempRow = 0; tempRow < rowNames.Count(); tempRow ++)
+            {
+                int rowTotal = 0;
+                for (int tempCol = 1; tempCol < columnNames.Count()-4; tempCol ++)
+                {
+                    string currCell = dt.Rows[tempRow][tempCol].ToString();
+                    if (currCell != "")
+                    {
+                        rowTotal += Int16.Parse(currCell);
+                    }
+                }
+                dt.Rows[tempRow]["Monthly Total"] = rowTotal;
+            }
+
             // Return all the collected data.
             return dt;
         }
