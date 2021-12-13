@@ -28,28 +28,7 @@ namespace musk_reports
 			InitializeComponent();
 		}
 
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			//this displays the List Reports form
-			
-			(new musk_reports.ListReports()).Show();
-
-		}
-
-		private void button3_Click(object sender, EventArgs e)
-		{
-			//this displays the add reports form
-			(new musk_reports.addReportF()).Show();
-		}
-
-		private void button4_Click(object sender, EventArgs e)
-		{
-			//this displays the YTD Reports form
-			(new musk_reports.Form1()).Show();
-			
-		}
-
+		
 		private void label3_Click(object sender, EventArgs e)
 		{
 
@@ -61,24 +40,13 @@ namespace musk_reports
 
 		}
 
-		// Set Reporting Button
-		private void button5_Click(object sender, EventArgs e)
-		{
-			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + "(" + comboBox2.SelectedItem + ")";
-		}
-
 		private void Adminform_Load(object sender, EventArgs e)
 		{
 
 		}
 
-		// Remove Report Button
-		private void button2_Click(object sender, EventArgs e)
-		{
-			//this displaysthe rmove reports form
-			(new musk_reports.RemoveReport()).Show();
-
-		}
+		
+		
 		// Period Selector
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -119,5 +87,41 @@ namespace musk_reports
 					break;
 			}
 		}
-	}
+
+		//List Reports
+        private void ListReportsButton_Click(object sender, EventArgs e)
+        {
+			//this displays the List Reports form
+
+			(new musk_reports.ListReports()).Show();
+		}
+
+		//Add Report 
+        private void AddReportButton_Click(object sender, EventArgs e)
+        {
+			//this displays the add reports form
+			(new musk_reports.addReportF()).Show();
+		}
+
+		//Remove Report 
+        private void RemoveReportButton_Click(object sender, EventArgs e)
+        {
+			//this displaysthe rmove reports form
+			(new musk_reports.RemoveReport()).Show();
+		}
+
+		//YTD Reports
+        private void YTDReportButton_Click(object sender, EventArgs e)
+        {
+			//this displays the YTD Reports form
+			(new musk_reports.Form1()).Show();
+		}
+
+		//Set Reporting Period
+        private void SetReportingPeriodButton_Click(object sender, EventArgs e)
+        {
+			//Set the global variables to be used on forms.
+			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + "(" + comboBox2.SelectedItem + ")";
+		}
+    }
 }

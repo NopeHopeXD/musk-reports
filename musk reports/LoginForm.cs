@@ -24,7 +24,7 @@ namespace musk_reports
         
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SubmitBtn_Click(object sender, EventArgs e)
         {          
 
             //Check the username and password entered against entries in the Login table.
@@ -32,7 +32,7 @@ namespace musk_reports
             SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\Muskdata.mdf" +
             "\";Integrated Security=True;Connect Timeout=30");
             // Prepare the SQL Adapter
-            SqlDataAdapter sqa = new SqlDataAdapter("Select Count(*) from Login where UserName ='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", conn);
+            SqlDataAdapter sqa = new SqlDataAdapter("Select Count(*) from Login where UserName ='" + UserNameTextBox.Text + "' and Password='" + PasswordTextBox.Text + "'", conn);
             DataTable dt = new DataTable(); 
             sqa.Fill(dt);
            if (dt.Rows[0][0].ToString() == "1")
@@ -49,14 +49,6 @@ namespace musk_reports
             }
                       
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Exits the program.
-            MessageBox.Show("Thanks for using Musk Reports.");
-            this.Close();
-        }
-
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -68,6 +60,23 @@ namespace musk_reports
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            //Exits the program.
+            MessageBox.Show("Thanks for using Musk Reports.");
+            this.Close();
+        }
+
+        private void UserNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
