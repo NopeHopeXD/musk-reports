@@ -35,8 +35,8 @@
             this.AddReportButton = new System.Windows.Forms.Button();
             this.YTDReportButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.NumberOfDaysWeeksMonthsYearsComboBox = new System.Windows.Forms.ComboBox();
+            this.PeriodComboBox = new System.Windows.Forms.ComboBox();
             this.SetReportingPeriodButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -100,31 +100,31 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Set the reporting period (before selecting a form to display)";
             // 
-            // comboBox1
+            // NumberOfDaysWeeksMonthsYearsComboBox
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Number of - - - - -";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.NumberOfDaysWeeksMonthsYearsComboBox.Enabled = false;
+            this.NumberOfDaysWeeksMonthsYearsComboBox.FormattingEnabled = true;
+            this.NumberOfDaysWeeksMonthsYearsComboBox.Location = new System.Drawing.Point(17, 91);
+            this.NumberOfDaysWeeksMonthsYearsComboBox.Name = "NumberOfDaysWeeksMonthsYearsComboBox";
+            this.NumberOfDaysWeeksMonthsYearsComboBox.Size = new System.Drawing.Size(161, 24);
+            this.NumberOfDaysWeeksMonthsYearsComboBox.TabIndex = 6;
+            this.NumberOfDaysWeeksMonthsYearsComboBox.Text = "Number of - - - - -";
+            this.NumberOfDaysWeeksMonthsYearsComboBox.SelectedIndexChanged += new System.EventHandler(this.NumberOfDaysWeeksMonthsYearsComboBox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // PeriodComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.PeriodComboBox.FormattingEnabled = true;
+            this.PeriodComboBox.Items.AddRange(new object[] {
             "Day/s",
             "Week/s",
             "Month/s",
             "Year/s"});
-            this.comboBox2.Location = new System.Drawing.Point(17, 64);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(161, 24);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Period";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.PeriodComboBox.Location = new System.Drawing.Point(17, 64);
+            this.PeriodComboBox.Name = "PeriodComboBox";
+            this.PeriodComboBox.Size = new System.Drawing.Size(161, 24);
+            this.PeriodComboBox.TabIndex = 7;
+            this.PeriodComboBox.Text = "Period";
+            this.PeriodComboBox.SelectedIndexChanged += new System.EventHandler(this.PeriodComboBox_SelectedIndexChanged);
             // 
             // SetReportingPeriodButton
             // 
@@ -143,8 +143,8 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(626, 340);
             this.Controls.Add(this.SetReportingPeriodButton);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.PeriodComboBox);
+            this.Controls.Add(this.NumberOfDaysWeeksMonthsYearsComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.YTDReportButton);
             this.Controls.Add(this.AddReportButton);
@@ -171,8 +171,8 @@
         private System.Windows.Forms.Button AddReportButton;
         private System.Windows.Forms.Button YTDReportButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox NumberOfDaysWeeksMonthsYearsComboBox;
+        private System.Windows.Forms.ComboBox PeriodComboBox;
         private System.Windows.Forms.Button SetReportingPeriodButton;
     }
 }
