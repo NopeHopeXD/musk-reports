@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-            this.label1 = new System.Windows.Forms.Label();
+            this.SelectFormLabel = new System.Windows.Forms.Label();
             this.ListReportsButton = new System.Windows.Forms.Button();
             this.RemoveReportButton = new System.Windows.Forms.Button();
             this.AddReportButton = new System.Windows.Forms.Button();
             this.YTDReportButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.NumberOfDaysWeeksMonthsYearsComboBox = new System.Windows.Forms.ComboBox();
             this.PeriodComboBox = new System.Windows.Forms.ComboBox();
             this.SetReportingPeriodButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // SelectFormLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 194);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Select the form to display";
+            this.SelectFormLabel.AutoSize = true;
+            this.SelectFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectFormLabel.Location = new System.Drawing.Point(12, 194);
+            this.SelectFormLabel.Name = "SelectFormLabel";
+            this.SelectFormLabel.Size = new System.Drawing.Size(229, 25);
+            this.SelectFormLabel.TabIndex = 0;
+            this.SelectFormLabel.Text = "Select the form to display";
+            this.SelectFormLabel.Click += new System.EventHandler(this.SelectFormLabel_Click);
             // 
             // ListReportsButton
             // 
@@ -90,15 +91,15 @@
             this.YTDReportButton.UseVisualStyleBackColor = true;
             this.YTDReportButton.Click += new System.EventHandler(this.YTDReportButton_Click);
             // 
-            // label2
+            // titleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(516, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Set the reporting period (before selecting a form to display)";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(12, 27);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(516, 25);
+            this.titleLabel.TabIndex = 5;
+            this.titleLabel.Text = "Set the reporting period (before selecting a form to display)";
             // 
             // NumberOfDaysWeeksMonthsYearsComboBox
             // 
@@ -145,12 +146,12 @@
             this.Controls.Add(this.SetReportingPeriodButton);
             this.Controls.Add(this.PeriodComboBox);
             this.Controls.Add(this.NumberOfDaysWeeksMonthsYearsComboBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.YTDReportButton);
             this.Controls.Add(this.AddReportButton);
             this.Controls.Add(this.RemoveReportButton);
             this.Controls.Add(this.ListReportsButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SelectFormLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -165,12 +166,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SelectFormLabel;
         private System.Windows.Forms.Button ListReportsButton;
         private System.Windows.Forms.Button RemoveReportButton;
         private System.Windows.Forms.Button AddReportButton;
         private System.Windows.Forms.Button YTDReportButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.ComboBox NumberOfDaysWeeksMonthsYearsComboBox;
         private System.Windows.Forms.ComboBox PeriodComboBox;
         private System.Windows.Forms.Button SetReportingPeriodButton;

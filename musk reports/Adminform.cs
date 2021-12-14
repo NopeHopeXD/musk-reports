@@ -29,16 +29,6 @@ namespace musk_reports
 		}
 
 		
-		private void label3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void Adminform_Load(object sender, EventArgs e)
-		{
-
-		}
-
 		//List Reports
         private void ListReportsButton_Click(object sender, EventArgs e)
         {
@@ -122,5 +112,20 @@ namespace musk_reports
         {
 
         }
-    }
+
+        private void SelectFormLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Adminform_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

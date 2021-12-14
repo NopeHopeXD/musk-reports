@@ -23,7 +23,7 @@ namespace musk_reports
             //links the completed dataTable to the dataGridView on the form
             reportTable.DataSource = reportsDataTable;
             //this displas the reporting priod set on the admin form
-            label3.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
+           ReportingPeriodLabel.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
         }
 
         public void InitializeTable()
@@ -40,12 +40,36 @@ namespace musk_reports
                 reportsDataTable.Rows.Add(reportInstance.ReportID, reportInstance.StaffID, reportInstance.HeaderID, reportInstance.DataSetID);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
+        }
+                      
+
+        private void AddReportButton_Click(object sender, EventArgs e)
+        {
+            //this displays the add reports form and closes the list reports
+            (new musk_reports.addReportF()).Show();
+            this.Close();
         }
 
+        private void DeleteReportButton_Click(object sender, EventArgs e)
+        {
+            //this displays the remove reports form and closes the list reports
+            (new musk_reports.RemoveReport()).Show();
+            this.Close();
+        }
+
+        private void ReportingPeriodLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void ListReports_Load(object sender, EventArgs e)
+        {
+
+        }
         private void reportTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -56,30 +80,5 @@ namespace musk_reports
 
         }
 
-        // View Report Button -- Idk what this is supposed to do, show YTD Report maybe?
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //this displays the add reports form and closes the list reports
-            (new musk_reports.addReportF()).Show();
-            this.Close();
-        }
-
-       
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //this displays the remove reports form and closes the list reports
-            (new musk_reports.RemoveReport()).Show();
-            this.Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ListReports_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
