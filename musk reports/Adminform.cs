@@ -15,7 +15,7 @@ namespace musk_reports
 		/* Attributes - - - - - - - - - - - - - - - - - - - - */
 
 		String chosenPeriod;
-		String numberOfText;
+		String comboBox1Text;
 		String currentYear;
 		String[] monthNamesArray = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
@@ -34,9 +34,58 @@ namespace musk_reports
 
 		}
 
+		// Number of periods selector
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
 		private void Adminform_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		
+		
+		// Period Selector
+		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			// Enables the second drop down, once the first drop down has been interacted with.
+			comboBox1.Enabled = true;
+
+			// Set text of the lower drop list.
+			chosenPeriod = comboBox2.SelectedItem.ToString();
+			comboBox1Text = String.Format("Number of {0}", chosenPeriod);
+			comboBox1.Text = comboBox1Text;
+
+			// Switch-Case for the values in the lower drop list.
+			switch (chosenPeriod)
+            {
+				case "Day/s":
+					comboBox1.Items.Clear();
+					for (int i = 0; i < 31; i++) { comboBox1.Items.Add(i+1); }
+					break;
+
+				case "Week/s":
+					comboBox1.Items.Clear();
+					for (int i = 0; i < 52; i++) { comboBox1.Items.Add(i + 1); }
+					break;
+
+				case "Month/s":
+					comboBox1.Items.Clear();
+					//for (int i = 0; i < 12; i++) { comboBox1.Items.Add(i + 1); }		// Print the month number.
+					foreach (var monthName in monthNamesArray) { comboBox1.Items.Add(monthName); }		// Print the month name.
+					break;
+
+				case "Year/s":
+					comboBox1.Items.Clear();
+					for (int i = 2000; i <= 2030; i++) { comboBox1.Items.Add(i); }
+					
+					// Set the current year to be selected by default.
+					currentYear = DateTime.Now.Year.ToString();
+					comboBox1.Text = currentYear;
+					break;
+			}
 		}
 
 		//List Reports
@@ -72,55 +121,7 @@ namespace musk_reports
         private void SetReportingPeriodButton_Click(object sender, EventArgs e)
         {
 			//Set the global variables to be used on forms.
-			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = NumberOfDaysWeeksMonthsYearsComboBox.SelectedItem + " " + "(" + PeriodComboBox.SelectedItem + ")";
+			Musk_ReportsGlobalVariables.GlobalVarReportingPeriod = comboBox1.SelectedItem + " " + "(" + comboBox2.SelectedItem + ")";
 		}
-
-		//Period Selector
-
-        private void PeriodComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-			// Enables the second drop down, once the first drop down has been interacted with.
-			NumberOfDaysWeeksMonthsYearsComboBox.Enabled = true;
-
-			// Set text of the lower drop list.
-			chosenPeriod = PeriodComboBox.SelectedItem.ToString();
-			numberOfText = String.Format("Number of {0}", chosenPeriod);
-			NumberOfDaysWeeksMonthsYearsComboBox.Text = numberOfText;
-
-			// Switch-Case for the values in the lower drop list.
-			switch (chosenPeriod)
-			{
-				case "Day/s":
-					NumberOfDaysWeeksMonthsYearsComboBox.Items.Clear();
-					for (int i = 0; i < 31; i++) { NumberOfDaysWeeksMonthsYearsComboBox.Items.Add(i + 1); }
-					break;
-
-				case "Week/s":
-					NumberOfDaysWeeksMonthsYearsComboBox.Items.Clear();
-					for (int i = 0; i < 52; i++) { NumberOfDaysWeeksMonthsYearsComboBox.Items.Add(i + 1); }
-					break;
-
-				case "Month/s":
-					NumberOfDaysWeeksMonthsYearsComboBox.Items.Clear();
-					//for (int i = 0; i < 12; i++) { comboBox1.Items.Add(i + 1); }		// Print the month number.
-					foreach (var monthName in monthNamesArray) { NumberOfDaysWeeksMonthsYearsComboBox.Items.Add(monthName); }      // Print the month name.
-					break;
-
-				case "Year/s":
-					NumberOfDaysWeeksMonthsYearsComboBox.Items.Clear();
-					for (int i = 2000; i <= 2030; i++) { NumberOfDaysWeeksMonthsYearsComboBox.Items.Add(i); }
-
-					// Set the current year to be selected by default.
-					currentYear = DateTime.Now.Year.ToString();
-					NumberOfDaysWeeksMonthsYearsComboBox.Text = currentYear;
-					break;
-			}
-		}
-
-		// Number of periods selector
-		private void NumberOfDaysWeeksMonthsYearsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
