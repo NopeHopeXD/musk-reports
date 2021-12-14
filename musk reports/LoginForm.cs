@@ -19,10 +19,13 @@ namespace musk_reports
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
-        
+            //Exits the program.
+            MessageBox.Show("Thanks for using Musk Reports.");
+            this.Close();
         }
+
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {          
@@ -59,24 +62,17 @@ namespace musk_reports
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            //Exits the program.
-            MessageBox.Show("Thanks for using Musk Reports.");
-            this.Close();
-        }
-
         private void UserNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MuskLogo_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginId = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.SubmitBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.MuskLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MuskLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // loginId
@@ -51,15 +51,15 @@
             this.loginId.Text = "Username";
             this.loginId.Click += new System.EventHandler(this.loginId_Click);
             // 
-            // label2
+            // PasswordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 139);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(272, 139);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(89, 22);
+            this.PasswordLabel.TabIndex = 1;
+            this.PasswordLabel.Text = "Password";
             // 
             // UserNameTextBox
             // 
@@ -100,27 +100,27 @@
             this.SubmitBtn.UseVisualStyleBackColor = true;
             this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
-            // label1
+            // welcomeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(132, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 22);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Welcome to the Musk Reports Application.";
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(132, 23);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(387, 22);
+            this.welcomeLabel.TabIndex = 7;
+            this.welcomeLabel.Text = "Welcome to the Musk Reports Application.";
             // 
-            // pictureBox1
+            // MuskLogo
             // 
-            this.pictureBox1.ImageLocation = "https://media.glassdoor.com/sqll/3559938/musk-process-services-squarelogo-1635937" +
+            this.MuskLogo.ImageLocation = "https://media.glassdoor.com/sqll/3559938/musk-process-services-squarelogo-1635937" +
     "470753.png";
-            this.pictureBox1.Location = new System.Drawing.Point(28, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 236);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.MuskLogo.Location = new System.Drawing.Point(28, 61);
+            this.MuskLogo.Name = "MuskLogo";
+            this.MuskLogo.Size = new System.Drawing.Size(218, 236);
+            this.MuskLogo.TabIndex = 8;
+            this.MuskLogo.TabStop = false;
+            this.MuskLogo.Click += new System.EventHandler(this.MuskLogo_Click);
             // 
             // Login
             // 
@@ -129,13 +129,13 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(662, 353);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MuskLogo);
+            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.loginId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -148,7 +148,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Musk Reports Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MuskLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,12 +157,12 @@
         #endregion
 
         private System.Windows.Forms.Label loginId;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox UserNameTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button SubmitBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.PictureBox MuskLogo;
     }
 }
