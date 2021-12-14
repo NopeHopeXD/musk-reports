@@ -26,7 +26,10 @@ namespace musk_reports
             label3.Text = "Reporting Period : " + Musk_ReportsGlobalVariables.GlobalVarReportingPeriod;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
         // Set up the Graph
         private void graphSetup()
@@ -46,7 +49,10 @@ namespace musk_reports
 
         }
 
+        private void Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
         // The Button that switches between the Table and the Graph
         private void Grid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -56,10 +62,13 @@ namespace musk_reports
             Graphs.Visible = !Graphs.Visible;
 
             // Change the Button text, and run graphSetup method
-            if (Graphs.Visible) {
+            if (Graphs.Visible)
+            {
                 graphSetup();
                 DispGraphPage.Text = "Show Table";
-            } else {
+            }
+            else
+            {
                 DispGraphPage.Text = "Show Graphs";
             }
 
@@ -110,7 +119,15 @@ namespace musk_reports
             this.Close();
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         // Remove Report Button
         private void Button3_Click(object sender, EventArgs e)
@@ -124,7 +141,7 @@ namespace musk_reports
         {
             (new musk_reports.AdminForm()).Show();
             this.Close();
-            
+
         }
 
         private void label3_Click(object sender, EventArgs e)
